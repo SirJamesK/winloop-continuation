@@ -1,0 +1,157 @@
+{
+  "admission_contract": {
+    "joint_cut_floor": 21,
+    "nonendpoint_route_cut_floor": 22,
+    "synthetic_lower_cost_floor": 60
+  },
+  "carried_endpoint_theorem": {
+    "endpoint_cut": 21,
+    "note": "Carried baseline only; not re-proved in this reconstruction.",
+    "source_version": "V13"
+  },
+  "merkle_resource_accounting": {
+    "all3_signature_verifications_full_snapshot": 384,
+    "all_inclusion_proofs_reconstructable": true,
+    "avg_inclusion_proof_hashes": 7,
+    "ephemeral_full_tree_bytes": 8160,
+    "internal_hashes_per_full_rebuild": 127,
+    "leaf_hashes_per_full_rebuild": 128,
+    "materialized_single_log_proof_bytes": 28672,
+    "minimum_2of3_signature_verifications_full_snapshot": 256,
+    "persistent_frontier_root_bytes": 32,
+    "persistent_reduction_fraction": 0.9988839285714286,
+    "reference_changed_statement_plus_dual_log_proof_bytes": 489,
+    "shared_audit_messages_formula": "132 + 4*k",
+    "statements": 128
+  },
+  "next_priorities": [
+    "Recursively decompose the accepted four-root common privileged fabric below privileged cloud/PAM tenancy, HSM management/custody/issuance/rotation, operator IAM/key custody, provider/build/CA dependencies, and fabric-local possession.",
+    "Test whether those roots conceal a smaller privileged cloud/PAM identity fabric, HSM-management authority, shared operator administration, or provider/build/CA super-root.",
+    "Extend temporal state modeling for key theft/exportability, detection, eviction, rotation, revocation publication, verifier consumption, stale authorization, ceremony validity, and control-artifact lifetime.",
+    "Extend churn/freshness validation for privileged cloud/PAM/HSM/operator rotation, fabric-local re-custody, issuance/ceremony authority rotation, split-log recovery, delayed propagation, and source disappearance.",
+    "Keep V21 routing until a replacement clears zero stationary/near-threshold false activations over >=2,000 seeds and materially improves drift/selective/correlated detection without extra probes."
+  ],
+  "recursive_evidence": {
+    "ceremony_expiry_enforced": true,
+    "common_issuance_rotation_accepted": true,
+    "dual_log_recovery_accepted": true,
+    "explicit_root_references": 15,
+    "hsm_recustody_accepted": true,
+    "nonprimitive_capabilities": 7,
+    "old_metadata_rejected_after_revocation": true,
+    "one_source_loss_tolerated": true,
+    "operator_rotation_accepted": true,
+    "provider_evidence_cannot_impersonate_hsm": true,
+    "rotated_metadata_accepted": true,
+    "signed_dependency_cycle_rejected": true,
+    "single_log_partition_rejected": true,
+    "stale_evidence_rejected": true,
+    "two_source_loss_rejected": true,
+    "unrelated_admin_cannot_forge_local_evidence": true,
+    "valid_graph_accepted": true
+  },
+  "routing": {
+    "active_design": "carried V21 guarded router",
+    "replacement_merged": false
+  },
+  "runtime": {
+    "new_nonstationary_envelope_claimed": false,
+    "reason": "V42 deep common-fabric decomposition was the unresolved prerequisite."
+  },
+  "static_exact": {
+    "all_common_remove_fabric_local": {
+      "admitted": false,
+      "joint": 21,
+      "provenance": 21
+    },
+    "all_tested_common_authorities_with_locals": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "common_hsm_issuance_with_local": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "common_hsm_issuance_without_local": {
+      "admitted": false,
+      "joint": 21,
+      "provenance": 21
+    },
+    "common_operator_admin_with_local": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "common_operator_admin_without_local": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "common_privileged_fabric_with_fabric_local": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "common_privileged_fabric_without_fabric_local": {
+      "admitted": false,
+      "joint": 21,
+      "provenance": 21
+    },
+    "deep_hardened": {
+      "admitted": true,
+      "joint": 21,
+      "provenance": 22
+    },
+    "deep_hardened_remove_pam_plane_local": {
+      "admitted": false,
+      "joint": 21,
+      "provenance": 21
+    }
+  },
+  "status": "reconstructed-from-preserved-v42-contract",
+  "temporal_exact": {
+    "accepted_common_fabric_strict": {
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "all_root_three_epoch_reuse": {
+      "joint_peak": 7,
+      "provenance_peak": 8,
+      "winner": "endpoint"
+    },
+    "all_root_two_epoch_reuse": {
+      "joint_peak": 11,
+      "provenance_peak": 11,
+      "winner": "endpoint"
+    },
+    "four_root_common_fabric_core_two_epoch": {
+      "joint_peak": 18,
+      "provenance_peak": 18,
+      "winner": "provenance"
+    },
+    "nine_long_lived_fast_revocation": {
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "nine_long_lived_slow_consumption": {
+      "joint_peak": 12,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "one_common_fabric_root_extra_epoch": {
+      "joint_peak": 21,
+      "provenance_peak": 21,
+      "winner": "endpoint_tie"
+    },
+    "zero_margin_common_fabric_strict": {
+      "joint_peak": 21,
+      "provenance_peak": 21,
+      "winner": "endpoint_tie"
+    }
+  },
+  "version": "V42"
+}
