@@ -1,0 +1,203 @@
+{
+  "admission_contract": {
+    "joint_cut_floor": 21,
+    "nonendpoint_route_cut_floor": 22,
+    "synthetic_lower_cost_floor": 60
+  },
+  "carried_endpoint_theorem": {
+    "endpoint_cut": 21,
+    "fresh_reproof_claimed": false,
+    "source_version": "V13"
+  },
+  "evidence_bound_static": {
+    "admitted": true,
+    "evidence_accepted": true,
+    "joint_cut": 21,
+    "joint_lower_cost": 63,
+    "provenance_cut": 22
+  },
+  "evidence_churn_exact": {
+    "authentic_dual_log_recovery_accepted": true,
+    "capability_binding_swap_rejected": true,
+    "ceremony_expiry_rejected": true,
+    "covered_primitive_roots": 24,
+    "current_2of3_dual_log_snapshot_accepted": true,
+    "delayed_log_consumption_recovery_accepted": true,
+    "delayed_log_consumption_rejected": true,
+    "forged_independence_domain_rejected": true,
+    "one_issuer_source_loss_tolerated": true,
+    "single_log_partition_rejected": true,
+    "stale_evidence_rejected": true,
+    "two_issuer_source_loss_rejected": true
+  },
+  "evidence_contract": {
+    "covered_primitive_roots": 24,
+    "freshness": "max age 1 epoch; ceremony/issuance-local age 0",
+    "issuer_quorum": "2-of-3 per primitive root",
+    "required_logs": [
+      "log_alpha",
+      "log_beta"
+    ],
+    "seal_semantics": "deterministic model binding only; not production cryptography"
+  },
+  "headline": "V44 binds all 24 non-endpoint primitive roots to current 2-of-3 dual-log evidence: baseline remains joint 21/provenance 22, every tested second-order common-control collapse falls to provenance 21, and staged verifier-consumption delays reproduce the V43 temporal degradations.",
+  "merkle_resource_accounting": {
+    "all3_signature_verifications_full_snapshot": 384,
+    "avg_inclusion_proof_hashes": 7,
+    "ephemeral_full_tree_bytes": 8160,
+    "internal_hashes_per_full_rebuild": 127,
+    "leaf_hashes_per_full_rebuild": 128,
+    "materialized_single_log_proof_bytes": 28672,
+    "minimum_2of3_signature_verifications_full_snapshot": 256,
+    "persistent_frontier_root_bytes": 32,
+    "persistent_reduction_fraction": 0.9988839285714286,
+    "reference_changed_statement_plus_dual_log_proof_bytes": 489,
+    "shared_audit_messages_formula": "132 + 4*k",
+    "statements": 128
+  },
+  "next_priorities": [
+    "Add monotonic revocation-ledger and cross-log consistency/equivocation proofs.",
+    "Model issuer-key rotation and quorum-member replacement including overlap windows.",
+    "Continue second-order decomposition below provider/organizational/cloud/HSM/operator control domains; absent real independence evidence fails closed.",
+    "Extend staged temporal analysis to robust lower/nominal/upper costs and correlated delays."
+  ],
+  "recursive_capability_graph": {
+    "all_nonendpoint_primitive_roots": 24,
+    "common_privileged_fabric_primitive_roots": 11,
+    "dependency_cycle_rejected": true,
+    "nonprimitive_capabilities": 6,
+    "unknown_capability_rejected": true
+  },
+  "routing": {
+    "active_design": "carried V21 guarded router",
+    "replacement_merged": false
+  },
+  "runtime": {
+    "new_nonstationary_routing_envelope_claimed": false,
+    "reason": "V44 advances evidence-bound provenance and staged authorization lifetime; V21 routing remains active."
+  },
+  "second_order_common_control_exact": {
+    "baseline_independence_evidence": {
+      "admitted": true,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 22
+    },
+    "fabric_local_and_privileged_tenant_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "hsm_custody_and_issuance_rotation_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "hsm_management_and_operator_iam_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "missing_independence_evidence_fails_closed": {
+      "admitted": false,
+      "evidence_accepted": false
+    },
+    "provider_build_and_cloud_pam_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    }
+  },
+  "staged_temporal_exact": {
+    "all_root_three_epoch_reuse": {
+      "endpoint_peak": 7,
+      "joint_peak": 7,
+      "provenance_peak": 8,
+      "winner": "endpoint"
+    },
+    "all_root_two_epoch_reuse": {
+      "endpoint_peak": 11,
+      "joint_peak": 11,
+      "provenance_peak": 11,
+      "winner": "endpoint_tie"
+    },
+    "ceremony_expiry_caps_long_revoke_chain": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "derived_caps": {
+      "ceremony_lifetime": 1,
+      "stale_auth_lifetime": 2
+    },
+    "four_deep_roots_fast_consumption": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "four_deep_roots_slow_verifier_consumption": {
+      "endpoint_peak": 21,
+      "joint_peak": 18,
+      "provenance_peak": 18,
+      "winner": "provenance"
+    },
+    "one_deep_root_slow_verifier_consumption": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 21,
+      "winner": "endpoint_tie"
+    },
+    "stale_authorization_ttl_caps_long_revoke_chain": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 21,
+      "winner": "endpoint_tie"
+    },
+    "strict": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    }
+  },
+  "static_exact": {
+    "admitted": true,
+    "joint_cut": 21,
+    "joint_lower_cost": 63,
+    "nonendpoint": {
+      "downstream_pam_plane": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "upper_cost": 138
+      },
+      "issuance_ceremony": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "upper_cost": 138
+      },
+      "recursive_common_fabric": {
+        "lower_cost": 66,
+        "nominal_cost": 88,
+        "root_count": 22,
+        "upper_cost": 132
+      }
+    },
+    "nonendpoint_winner": "recursive_common_fabric",
+    "provenance_cut": 22
+  },
+  "validation_digest_sha256": "f7d173da5198da968f928c647dce24260c31b3324de5a8bfa61b5814f5a80748",
+  "version": "V44"
+}
