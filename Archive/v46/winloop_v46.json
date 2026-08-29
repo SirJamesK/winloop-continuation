@@ -1,0 +1,320 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 60,
+    "nonendpoint": 22
+  },
+  "common_control": {
+    "baseline": {
+      "admitted": true,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "routes": {
+        "ceremony": 23,
+        "pam": 23,
+        "recursive": 22
+      }
+    },
+    "collapses": [
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      },
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      },
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      },
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      },
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      },
+      {
+        "admitted": false,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "routes": {
+          "ceremony": 22,
+          "pam": 22,
+          "recursive": 21
+        }
+      }
+    ]
+  },
+  "digest": "eea550476d1c327e84c72009466da8e1d60aab75582b33777a923a522cca8482",
+  "dual_log": {
+    "conflicting_root_rejected": true,
+    "growth_accepted": true,
+    "rollback_rejected": true,
+    "tampered_consistency_rejected": true
+  },
+  "endpoint_theorem": {
+    "cut": 21,
+    "fresh_reproof": false,
+    "source": "V13"
+  },
+  "graph": {
+    "cycle_rejected": true,
+    "unknown_rejected": true
+  },
+  "headline": "V46 replaces the hash-chain witness with explicit Merkle inclusion/consistency proofs, adds 2-of-3 witness gossip deadlines and issuer-seat CA/HSM/operator dependency checks, and exhaustively optimizes 128 deep-root delay schedules: one delayed root drives provenance 22\u219221, while three delayed roots are first to push synthetic lower cost below 60.",
+  "issuer_dependency": {
+    "all_shared_cut": 5,
+    "common_ca_cut": 7,
+    "common_hsm_cut": 7,
+    "common_operator_cut": 7,
+    "distinct_cut": 8,
+    "shared_dependency_rejected": true
+  },
+  "merkle": {
+    "avg_inclusion_hashes": 7.0,
+    "consistency_all": true,
+    "inclusion_all": true,
+    "max_consistency_hashes": 8,
+    "max_inclusion_hashes": 7,
+    "tampered_consistency_rejected": true,
+    "tampered_inclusion_rejected": true
+  },
+  "next": [
+    "integrate witness+issuer evidence into each primitive statement",
+    "optimize all 22 provenance roots with heterogeneous stage windows and budgets",
+    "embed witness/issuer control roots in the OR-of-AND cut graph",
+    "account proof caching/frontier updates without hiding trust-bearing traffic"
+  ],
+  "resource": {
+    "avg_inclusion_hashes": 7.0,
+    "frontier_storage_only": true,
+    "hash_bytes": 32,
+    "max_consistency_hashes": 8,
+    "shared_audit": "132 + 4*k",
+    "statements": 128
+  },
+  "revocation_rotation": {
+    "baseline": true,
+    "one_revoked_survives": true,
+    "revoked_replay_no_restore": true,
+    "same_seat_overlap_no_double": true,
+    "successor_after_old_revoke": true,
+    "two_revoked_break": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "static": {
+    "admitted": true,
+    "joint": 21,
+    "lower": 63,
+    "provenance": 22,
+    "routes": {
+      "ceremony": 23,
+      "pam": 23,
+      "recursive": 22
+    }
+  },
+  "temporal_optimizer": {
+    "by_count": [
+      {
+        "admitted": true,
+        "delayed": 0,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 22,
+        "roots": []
+      },
+      {
+        "admitted": false,
+        "delayed": 1,
+        "joint": 21,
+        "lower": 63,
+        "provenance": 21,
+        "roots": [
+          "build_ca_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 2,
+        "joint": 20,
+        "lower": 60,
+        "provenance": 20,
+        "roots": [
+          "build_ca_local",
+          "ca_key_ceremony_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 3,
+        "joint": 19,
+        "lower": 57,
+        "provenance": 19,
+        "roots": [
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "hsm_custody_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 4,
+        "joint": 18,
+        "lower": 54,
+        "provenance": 18,
+        "roots": [
+          "cloud_pam_identity_fabric",
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "hsm_custody_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 5,
+        "joint": 17,
+        "lower": 51,
+        "provenance": 17,
+        "roots": [
+          "cloud_pam_identity_fabric",
+          "hsm_management_authority",
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "hsm_custody_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 6,
+        "joint": 16,
+        "lower": 48,
+        "provenance": 16,
+        "roots": [
+          "cloud_pam_identity_fabric",
+          "hsm_management_authority",
+          "operator_employment_iam",
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "hsm_custody_local"
+        ]
+      },
+      {
+        "admitted": false,
+        "delayed": 7,
+        "joint": 15,
+        "lower": 45,
+        "provenance": 15,
+        "roots": [
+          "cloud_pam_identity_fabric",
+          "hsm_management_authority",
+          "operator_employment_iam",
+          "provider_build_ca_control",
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "hsm_custody_local"
+        ]
+      }
+    ],
+    "first_cost_failure": {
+      "admitted": false,
+      "delayed": 3,
+      "joint": 19,
+      "lower": 57,
+      "provenance": 19,
+      "roots": [
+        "build_ca_local",
+        "ca_key_ceremony_local",
+        "hsm_custody_local"
+      ]
+    },
+    "first_failure": {
+      "admitted": false,
+      "delayed": 1,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 21,
+      "roots": [
+        "build_ca_local"
+      ]
+    },
+    "schedules": 128,
+    "strict": {
+      "admitted": true,
+      "delayed": 0,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "roots": []
+    },
+    "worst": {
+      "admitted": false,
+      "delayed": 7,
+      "joint": 15,
+      "lower": 45,
+      "provenance": 15,
+      "roots": [
+        "cloud_pam_identity_fabric",
+        "hsm_management_authority",
+        "operator_employment_iam",
+        "provider_build_ca_control",
+        "build_ca_local",
+        "ca_key_ceremony_local",
+        "hsm_custody_local"
+      ]
+    }
+  },
+  "version": "V46",
+  "witness": {
+    "equivocation_rejected": true,
+    "one_late_tolerated": true,
+    "quorum_accepted": true,
+    "split_without_target_quorum_rejected": true,
+    "two_late_rejected": true
+  }
+}
