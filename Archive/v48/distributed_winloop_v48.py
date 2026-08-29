@@ -113,7 +113,9 @@ def infrastructure_temporal():
  d={}
  for h in (2,3,4):
   dp,best=min_cost_by_peak(INFRA_CLASSES,h);floor=ceil(10/h);d[str(h)]={'exact_states':len(dp),'irreducible_floor':floor,'min_budget_to_floor':first_budget_for_peak(best,floor)}
+ # verifier-effective quarantine before next epoch resets every recovered control root to window 1.
  recovered_peak=10
+ # Check whether the 32-root forged-evidence path can ever beat the direct 22-root path through four epochs at equal synthetic budget.
  dd,db=min_cost_by_peak(root_classes()[2],4);fd,fb=min_cost_by_peak(FORGED_CLASSES,4)
  maxb=min(max(db.values()),max(fb.values()))
  def curve(best,b):return min((p for p,c in best.items() if c<=b),default=max(best))
@@ -123,6 +125,7 @@ def infrastructure_temporal():
   if q<p:witness.append((b,p,q))
  return {'static_cut':10,'horizons':d,'recovery_before_next_epoch_peak':recovered_peak,'recovery_restores_static_cut':recovered_peak==10,'four_epoch_direct_floor':min(db),'four_epoch_forged_floor':min(fb),'forged_route_undercuts_direct':bool(witness),'first_undercut':witness[0] if witness else None,'forged_exact_states':len(fd),'interpretation':'temporal reuse weakens evidence infrastructure itself, but independent statement-local bindings keep the 32-root forgery route above the direct 22-root provenance route through four epochs'}
 
+# RFC9162-style Merkle functions (domain-separated leaves/nodes) for checkpoint churn tests.
 def H(x):return hashlib.sha256(x).digest()
 def lh(x):return H(b'\x00'+x)
 def nh(a,b):return H(b'\x01'+a+b)
