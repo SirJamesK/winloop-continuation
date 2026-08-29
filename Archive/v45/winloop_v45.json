@@ -145,103 +145,226 @@
   },
   "staged_temporal_robust_cost_exact": {
     "all_root_three_epoch_reuse": {
-      "endpoint_cost": {"lower": 21, "nominal": 28, "upper": 42},
+      "endpoint_cost": {
+        "lower": 21,
+        "nominal": 28,
+        "upper": 42
+      },
       "endpoint_peak": 7,
-      "joint_cost": {"lower": 21, "nominal": 28, "upper": 42},
+      "joint_cost": {
+        "lower": 21,
+        "nominal": 28,
+        "upper": 42
+      },
       "joint_peak": 7,
-      "provenance_cost": {"lower": 22, "nominal": 30, "upper": 44},
+      "provenance_cost": {
+        "lower": 22,
+        "nominal": 30,
+        "upper": 44
+      },
       "provenance_peak": 8,
       "temporal_admitted": false,
       "winner": "endpoint"
     },
     "all_root_two_epoch_reuse": {
-      "endpoint_cost": {"lower": 32, "nominal": 42, "upper": 63},
+      "endpoint_cost": {
+        "lower": 32,
+        "nominal": 42,
+        "upper": 63
+      },
       "endpoint_peak": 11,
-      "joint_cost": {"lower": 32, "nominal": 42, "upper": 63},
+      "joint_cost": {
+        "lower": 32,
+        "nominal": 42,
+        "upper": 63
+      },
       "joint_peak": 11,
-      "provenance_cost": {"lower": 33, "nominal": 44, "upper": 66},
+      "provenance_cost": {
+        "lower": 33,
+        "nominal": 44,
+        "upper": 66
+      },
       "provenance_peak": 11,
       "temporal_admitted": false,
       "winner": "endpoint_tie"
     },
     "ceremony_expiry_caps_long_revoke_chain": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "joint_peak": 21,
-      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_cost": {
+        "lower": 66,
+        "nominal": 88,
+        "upper": 132
+      },
       "provenance_peak": 22,
       "temporal_admitted": true,
       "winner": "endpoint"
     },
     "cost_semantics": "synthetic lower/nominal/upper 3/4/6 per primitive compromise; model parameters, not empirical attacker prices",
-    "derived_caps": {"ceremony_lifetime": 1, "stale_auth_lifetime": 2},
+    "derived_caps": {
+      "ceremony_lifetime": 1,
+      "stale_auth_lifetime": 2
+    },
     "four_deep_roots_correlated_slow_consumption": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 54, "nominal": 72, "upper": 108},
+      "joint_cost": {
+        "lower": 54,
+        "nominal": 72,
+        "upper": 108
+      },
       "joint_peak": 18,
-      "provenance_cost": {"lower": 54, "nominal": 72, "upper": 108},
+      "provenance_cost": {
+        "lower": 54,
+        "nominal": 72,
+        "upper": 108
+      },
       "provenance_peak": 18,
       "temporal_admitted": false,
       "winner": "provenance"
     },
     "four_deep_roots_fast_consumption": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "joint_peak": 21,
-      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_cost": {
+        "lower": 66,
+        "nominal": 88,
+        "upper": 132
+      },
       "provenance_peak": 22,
       "temporal_admitted": true,
       "winner": "endpoint"
     },
     "hsm_cluster_correlated_slow_consumption": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "joint_cost": {
+        "lower": 57,
+        "nominal": 76,
+        "upper": 114
+      },
       "joint_peak": 19,
-      "provenance_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "provenance_cost": {
+        "lower": 57,
+        "nominal": 76,
+        "upper": 114
+      },
       "provenance_peak": 19,
       "temporal_admitted": false,
       "winner": "provenance"
     },
     "one_deep_root_slow_verifier_consumption": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "joint_peak": 21,
-      "provenance_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "provenance_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "provenance_peak": 21,
       "temporal_admitted": false,
       "winner": "endpoint_tie"
     },
     "provider_cluster_correlated_slow_consumption": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "joint_cost": {
+        "lower": 57,
+        "nominal": 76,
+        "upper": 114
+      },
       "joint_peak": 19,
-      "provenance_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "provenance_cost": {
+        "lower": 57,
+        "nominal": 76,
+        "upper": 114
+      },
       "provenance_peak": 19,
       "temporal_admitted": false,
       "winner": "provenance"
     },
     "stale_authorization_ttl_caps_long_revoke_chain": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "joint_peak": 21,
-      "provenance_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "provenance_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "provenance_peak": 21,
       "temporal_admitted": false,
       "winner": "endpoint_tie"
     },
     "strict": {
-      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "endpoint_peak": 21,
-      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_cost": {
+        "lower": 63,
+        "nominal": 84,
+        "upper": 126
+      },
       "joint_peak": 21,
-      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_cost": {
+        "lower": 66,
+        "nominal": 88,
+        "upper": 132
+      },
       "provenance_peak": 22,
       "temporal_admitted": true,
       "winner": "endpoint"
@@ -252,9 +375,24 @@
     "joint_cut": 21,
     "joint_lower_cost": 63,
     "nonendpoint": {
-      "downstream_pam_plane": {"lower_cost": 69, "nominal_cost": 92, "root_count": 23, "upper_cost": 138},
-      "issuance_ceremony": {"lower_cost": 69, "nominal_cost": 92, "root_count": 23, "upper_cost": 138},
-      "recursive_common_fabric": {"lower_cost": 66, "nominal_cost": 88, "root_count": 22, "upper_cost": 132}
+      "downstream_pam_plane": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "upper_cost": 138
+      },
+      "issuance_ceremony": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "upper_cost": 138
+      },
+      "recursive_common_fabric": {
+        "lower_cost": 66,
+        "nominal_cost": 88,
+        "root_count": 22,
+        "upper_cost": 132
+      }
     },
     "nonendpoint_winner": "recursive_common_fabric",
     "provenance_cut": 22
