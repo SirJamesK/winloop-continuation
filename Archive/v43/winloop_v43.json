@@ -1,0 +1,284 @@
+{
+  "admission_contract": {
+    "joint_cut_floor": 21,
+    "nonendpoint_route_cut_floor": 22,
+    "synthetic_lower_cost_floor": 60
+  },
+  "carried_endpoint_theorem": {
+    "endpoint_cut": 21,
+    "fresh_reproof_claimed": false,
+    "source_version": "V13"
+  },
+  "headline": "Recursive expansion proves the accepted common-fabric provenance route is exactly cut 22 with zero hidden slack: collapsing any tested deep independent authority/local prerequisite into a shared root reduces it to 21 and rejects admission.",
+  "merkle_resource_accounting": {
+    "all3_signature_verifications_full_snapshot": 384,
+    "all_inclusion_proofs_reconstructable": true,
+    "avg_inclusion_proof_hashes": 7,
+    "ephemeral_full_tree_bytes": 8160,
+    "internal_hashes_per_full_rebuild": 127,
+    "leaf_hashes_per_full_rebuild": 128,
+    "materialized_single_log_proof_bytes": 28672,
+    "minimum_2of3_signature_verifications_full_snapshot": 256,
+    "persistent_frontier_root_bytes": 32,
+    "persistent_reduction_fraction": 0.9988839285714286,
+    "reference_changed_statement_plus_dual_log_proof_bytes": 489,
+    "shared_audit_messages_formula": "132 + 4*k",
+    "statements": 128
+  },
+  "next_priorities": [
+    "Bind each recursively expanded common-fabric primitive to explicit issuer/quorum/log/freshness evidence and re-run churn, split-log, delayed-propagation, and source-loss validation.",
+    "Replace aggregate verifier-visible lifetime with explicit theft/exportability, detection, eviction, rotation, revocation publication, verifier consumption, stale-authorization, and ceremony-validity stages while preserving the exact nested-window peak calculation.",
+    "Test second-order common-control collapse below cloud/PAM identity, HSM management, provider/build/CA, and operator employment/IAM, including shared provider or organizational control roots; fail closed when independence evidence is absent.",
+    "Keep V21 guarded routing unless a replacement independently clears >=2,000 stationary and near-threshold seeds and materially improves gradual/selective/correlated detection with no extra probes."
+  ],
+  "recursive_capability_graph": {
+    "common_privileged_fabric_primitive_roots": 11,
+    "common_privileged_fabric_roots": [
+      "build_ca_local",
+      "ca_key_ceremony_local",
+      "cloud_pam_identity_fabric",
+      "fabric_local_possession",
+      "hsm_custody_local",
+      "hsm_issuance_rotation_local",
+      "hsm_management_authority",
+      "operator_employment_iam",
+      "operator_key_local",
+      "privileged_tenant_local",
+      "provider_build_ca_control"
+    ],
+    "nonprimitive_capabilities": 6,
+    "shared_cloud_pam_identity_deduplicated": true,
+    "signed_dependency_cycle_analog_rejected": true,
+    "unknown_capability_rejected": true
+  },
+  "recursive_collapse_exact": {
+    "baseline_recursive_decomposition": {
+      "admitted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 22
+    },
+    "collapse_ca_ceremony_local_into_build_local": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    },
+    "collapse_hsm_authority_into_cloud_pam_identity": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    },
+    "collapse_hsm_issuance_rotation_local_into_hsm_authority": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    },
+    "collapse_operator_iam_into_cloud_pam_identity": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    },
+    "collapse_provider_build_ca_into_cloud_pam_identity": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    },
+    "remove_fabric_local_possession": {
+      "admitted": false,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "nonendpoint_winner": "recursive_common_fabric",
+      "provenance_cut": 21
+    }
+  },
+  "routing": {
+    "active_design": "carried V21 guarded router",
+    "replacement_merged": false
+  },
+  "runtime": {
+    "new_nonstationary_routing_envelope_claimed": false,
+    "reason": "V43 advances recursive provenance and temporal authority-lifetime modeling only; V21 routing remains active."
+  },
+  "static_exact": {
+    "admitted": true,
+    "endpoint": {
+      "lower_cost": 63,
+      "nominal_cost": 84,
+      "root_count": 21,
+      "roots": [
+        "endpoint_01",
+        "endpoint_02",
+        "endpoint_03",
+        "endpoint_04",
+        "endpoint_05",
+        "endpoint_06",
+        "endpoint_07",
+        "endpoint_08",
+        "endpoint_09",
+        "endpoint_10",
+        "endpoint_11",
+        "endpoint_12",
+        "endpoint_13",
+        "endpoint_14",
+        "endpoint_15",
+        "endpoint_16",
+        "endpoint_17",
+        "endpoint_18",
+        "endpoint_19",
+        "endpoint_20",
+        "endpoint_21"
+      ],
+      "upper_cost": 126
+    },
+    "joint_cut": 21,
+    "joint_lower_cost": 63,
+    "nonendpoint": {
+      "downstream_pam_plane": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "roots": [
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "cloud_pam_identity_fabric",
+          "downstream_pam_plane_local",
+          "fabric_local_possession",
+          "hsm_custody_local",
+          "hsm_issuance_rotation_local",
+          "hsm_management_authority",
+          "operator_employment_iam",
+          "operator_key_local",
+          "privileged_tenant_local",
+          "provenance_anchor_01",
+          "provenance_anchor_02",
+          "provenance_anchor_03",
+          "provenance_anchor_04",
+          "provenance_anchor_05",
+          "provenance_anchor_06",
+          "provenance_anchor_07",
+          "provenance_anchor_08",
+          "provenance_anchor_09",
+          "provenance_anchor_10",
+          "provenance_anchor_11",
+          "provider_build_ca_control"
+        ],
+        "upper_cost": 138
+      },
+      "issuance_ceremony": {
+        "lower_cost": 69,
+        "nominal_cost": 92,
+        "root_count": 23,
+        "roots": [
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "cloud_pam_identity_fabric",
+          "fabric_local_possession",
+          "hsm_custody_local",
+          "hsm_issuance_rotation_local",
+          "hsm_management_authority",
+          "issuance_ceremony_local",
+          "operator_employment_iam",
+          "operator_key_local",
+          "privileged_tenant_local",
+          "provenance_anchor_01",
+          "provenance_anchor_02",
+          "provenance_anchor_03",
+          "provenance_anchor_04",
+          "provenance_anchor_05",
+          "provenance_anchor_06",
+          "provenance_anchor_07",
+          "provenance_anchor_08",
+          "provenance_anchor_09",
+          "provenance_anchor_10",
+          "provenance_anchor_11",
+          "provider_build_ca_control"
+        ],
+        "upper_cost": 138
+      },
+      "recursive_common_fabric": {
+        "lower_cost": 66,
+        "nominal_cost": 88,
+        "root_count": 22,
+        "roots": [
+          "build_ca_local",
+          "ca_key_ceremony_local",
+          "cloud_pam_identity_fabric",
+          "fabric_local_possession",
+          "hsm_custody_local",
+          "hsm_issuance_rotation_local",
+          "hsm_management_authority",
+          "operator_employment_iam",
+          "operator_key_local",
+          "privileged_tenant_local",
+          "provenance_anchor_01",
+          "provenance_anchor_02",
+          "provenance_anchor_03",
+          "provenance_anchor_04",
+          "provenance_anchor_05",
+          "provenance_anchor_06",
+          "provenance_anchor_07",
+          "provenance_anchor_08",
+          "provenance_anchor_09",
+          "provenance_anchor_10",
+          "provenance_anchor_11",
+          "provider_build_ca_control"
+        ],
+        "upper_cost": 132
+      }
+    },
+    "nonendpoint_winner": "recursive_common_fabric",
+    "provenance_cut": 22,
+    "winner": "endpoint"
+  },
+  "temporal_exact": {
+    "all_root_three_epoch_reuse": {
+      "endpoint_peak": 7,
+      "joint_peak": 7,
+      "provenance_peak": 8,
+      "winner": "endpoint"
+    },
+    "all_root_two_epoch_reuse": {
+      "endpoint_peak": 11,
+      "joint_peak": 11,
+      "provenance_peak": 11,
+      "winner": "endpoint_tie"
+    },
+    "four_deep_authority_roots_fast_revocation": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    },
+    "four_deep_authority_roots_two_epoch": {
+      "endpoint_peak": 21,
+      "joint_peak": 18,
+      "provenance_peak": 18,
+      "winner": "provenance"
+    },
+    "one_deep_common_root_extra_epoch": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 21,
+      "winner": "endpoint_tie"
+    },
+    "strict": {
+      "endpoint_peak": 21,
+      "joint_peak": 21,
+      "provenance_peak": 22,
+      "winner": "endpoint"
+    }
+  },
+  "validation_digest_sha256": "b063bdade0e9180fce3d6d62fddeb9dfe74d829715adc74966b169e178dd1a1d",
+  "version": "V43"
+}
