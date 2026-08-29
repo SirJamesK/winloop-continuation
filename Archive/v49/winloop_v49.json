@@ -1,0 +1,423 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 60,
+    "nonendpoint": 22
+  },
+  "checkpoint_recovery": {
+    "append_internal_hashes": 511,
+    "append_leaf_hashes": 513,
+    "append_total_hashes": 1024,
+    "evicted_checkpoint": 449,
+    "freshness_bound_statements": 64,
+    "frontier_final_hashes": 2,
+    "frontier_peak_bytes": 288,
+    "frontier_peak_hashes": 9,
+    "frontier_storage_only": true,
+    "lag33_delayed_propagation_accepted": true,
+    "lag64_dual_log_recovery_accepted": true,
+    "lag65_freshness_rejected": true,
+    "loss_of_entire_log_rejected": true,
+    "missing_recovery_proof_rejected": true,
+    "one_source_per_log_suffices": true,
+    "selected_consistency_valid": true,
+    "selected_inclusion_valid": true,
+    "shared_audit": "132 + 4*k",
+    "split_log_equivocation_rejected": true,
+    "statements": 513,
+    "tampered_recovery_proof_rejected": true,
+    "trust_bearing_messages_unchanged": true
+  },
+  "common_control": {
+    "all_rejected": true,
+    "baseline": {
+      "admitted": true,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "routes": {
+        "ceremony": 23,
+        "pam": 23,
+        "recursive": 22
+      }
+    },
+    "collapse_count": 6,
+    "collapse_provenance": [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21
+    ]
+  },
+  "digest": "76afb5c3ffb61aeb3f80a92659e7987bcb8a8fc04271c55fc78eee8285240b76",
+  "endpoint_theorem": {
+    "cut": 21,
+    "fresh_reproof": false,
+    "source": "V13"
+  },
+  "graph": {
+    "cycle_rejected": true,
+    "unknown_rejected": true
+  },
+  "headline": "V49 makes compromise-to-recovery trajectories explicit and extends exact route scheduling to five verifier-visible epochs: the recursive 22-root route reaches a peak floor of 5, while PAM and ceremony each also floor at 5 despite 23 roots; verifier-consumption delay alone extends stolen-authorization lifetime, and 513-statement dual-log recovery accepts lag<=64 with surviving sources but rejects whole-log loss, lag65, equivocation, missing proofs, and proof tampering.",
+  "integrated_evidence": {
+    "all_shared_and_common_local": {
+      "admitted": false,
+      "infrastructure_cut": 6,
+      "joint": 7,
+      "lower": 21,
+      "provenance": 7,
+      "routes": {
+        "ceremony": 8,
+        "pam": 8,
+        "recursive": 7
+      }
+    },
+    "all_shared_cut": 6,
+    "baseline": {
+      "admitted": true,
+      "infrastructure_cut": 10,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "routes": {
+        "ceremony": 23,
+        "pam": 23,
+        "recursive": 22
+      }
+    },
+    "common_ca": {
+      "admitted": false,
+      "infrastructure_cut": 9,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "routes": {
+        "ceremony": 23,
+        "pam": 23,
+        "recursive": 22
+      }
+    },
+    "common_ca_cut": 9,
+    "common_statement_local": {
+      "admitted": false,
+      "infrastructure_cut": 10,
+      "joint": 11,
+      "lower": 33,
+      "provenance": 11,
+      "routes": {
+        "ceremony": 12,
+        "pam": 12,
+        "recursive": 11
+      }
+    },
+    "common_witness": {
+      "admitted": false,
+      "infrastructure_cut": 9,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22,
+      "routes": {
+        "ceremony": 23,
+        "pam": 23,
+        "recursive": 22
+      }
+    },
+    "distinct_infrastructure_cut": 10,
+    "without_statement_local": {
+      "admitted": false,
+      "infrastructure_cut": 10,
+      "joint": 10,
+      "lower": 30,
+      "provenance": 10,
+      "routes": {
+        "ceremony": 11,
+        "pam": 11,
+        "recursive": 10
+      }
+    }
+  },
+  "next": [
+    "replace deterministic lifecycle templates with exact stochastic/adversarial observation schedules while preserving fail-closed verifier semantics",
+    "extend route optimization to heterogeneous prerequisite subsets and overlapping authority groups beyond symmetric root classes",
+    "model dual-log source replacement and key rotation under concurrent source loss, propagation delay, and checkpoint eviction",
+    "retain V21 routing unless the existing >=2000-seed acceptance bar is independently cleared"
+  ],
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "static": {
+    "admitted": true,
+    "joint": 21,
+    "lower": 63,
+    "provenance": 22,
+    "routes": {
+      "ceremony": 23,
+      "pam": 23,
+      "recursive": 22
+    }
+  },
+  "temporal_trajectories": {
+    "all_trajectory_orders_valid": true,
+    "consumption_gate": {
+      "fast_consumption_window": 1,
+      "same_preconsumption_events": true,
+      "slow_consumption_extends_stolen_authorization": true,
+      "slow_consumption_window": 3
+    },
+    "cost_model": "synthetic trajectory-extension costs; not empirical attack prices, detection times, or response times",
+    "cumulative_costs": {
+      "anchor": [
+        0,
+        6,
+        13,
+        21,
+        30
+      ],
+      "authority": [
+        0,
+        4,
+        9,
+        15,
+        22
+      ],
+      "local": [
+        0,
+        3,
+        7,
+        12,
+        18
+      ]
+    },
+    "first_lower_cost_failure": {
+      "admitted": false,
+      "budget": 9,
+      "joint": 19,
+      "lower": 57,
+      "provenance": 19
+    },
+    "first_route_failure": {
+      "admitted": false,
+      "budget": 3,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 21
+    },
+    "profile_counts": {
+      "anchor": 11,
+      "authority": 4,
+      "local": 7
+    },
+    "recovery_consumed_before_next_epoch": {
+      "epoch_acquisitions": [
+        0,
+        0,
+        0,
+        0,
+        22
+      ],
+      "peak": 22,
+      "restores_static_provenance_cut": true,
+      "window_counts": [
+        22,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "regression_horizons": {
+      "2": {
+        "exact_states": 23,
+        "irreducible_floor": 11,
+        "min_budget_to_floor": 37
+      },
+      "3": {
+        "exact_states": 276,
+        "irreducible_floor": 8,
+        "min_budget_to_floor": 79
+      },
+      "4": {
+        "exact_states": 2300,
+        "irreducible_floor": 6,
+        "min_budget_to_floor": 130
+      }
+    },
+    "roots": 22,
+    "routes": {
+      "ceremony": {
+        "assignment_matches_exact": true,
+        "exact_states": 17550,
+        "hall_peak": 5,
+        "horizon": 5,
+        "irreducible_floor": 5,
+        "min_budget_to_floor": 193,
+        "profile_counts": {
+          "anchor": 11,
+          "authority": 4,
+          "local": 8
+        },
+        "roots": 23,
+        "witness_epoch_acquisitions": [
+          3,
+          5,
+          5,
+          5,
+          5
+        ],
+        "witness_peak": 5,
+        "witness_window_counts": [
+          5,
+          5,
+          5,
+          5,
+          3
+        ]
+      },
+      "pam": {
+        "assignment_matches_exact": true,
+        "exact_states": 17550,
+        "hall_peak": 5,
+        "horizon": 5,
+        "irreducible_floor": 5,
+        "min_budget_to_floor": 193,
+        "profile_counts": {
+          "anchor": 11,
+          "authority": 4,
+          "local": 8
+        },
+        "roots": 23,
+        "witness_epoch_acquisitions": [
+          3,
+          5,
+          5,
+          5,
+          5
+        ],
+        "witness_peak": 5,
+        "witness_window_counts": [
+          5,
+          5,
+          5,
+          5,
+          3
+        ]
+      },
+      "recursive": {
+        "assignment_matches_exact": true,
+        "exact_states": 14950,
+        "hall_peak": 5,
+        "horizon": 5,
+        "irreducible_floor": 5,
+        "min_budget_to_floor": 175,
+        "profile_counts": {
+          "anchor": 11,
+          "authority": 4,
+          "local": 7
+        },
+        "roots": 22,
+        "witness_epoch_acquisitions": [
+          2,
+          5,
+          5,
+          5,
+          5
+        ],
+        "witness_peak": 5,
+        "witness_window_counts": [
+          5,
+          5,
+          5,
+          5,
+          2
+        ]
+      }
+    },
+    "strict": {
+      "admitted": true,
+      "budget": 0,
+      "joint": 21,
+      "lower": 63,
+      "provenance": 22
+    },
+    "trajectory_templates": {
+      "1": {
+        "compromised": 0,
+        "detected": 0,
+        "published": 0,
+        "quarantined": 0,
+        "recovered": 1,
+        "rotated": 0,
+        "usable_epochs": [
+          0
+        ],
+        "verifier_consume": 1
+      },
+      "2": {
+        "compromised": 0,
+        "detected": 1,
+        "published": 1,
+        "quarantined": 1,
+        "recovered": 2,
+        "rotated": 1,
+        "usable_epochs": [
+          0,
+          1
+        ],
+        "verifier_consume": 2
+      },
+      "3": {
+        "compromised": 0,
+        "detected": 1,
+        "published": 2,
+        "quarantined": 1,
+        "recovered": 3,
+        "rotated": 2,
+        "usable_epochs": [
+          0,
+          1,
+          2
+        ],
+        "verifier_consume": 3
+      },
+      "4": {
+        "compromised": 0,
+        "detected": 1,
+        "published": 3,
+        "quarantined": 2,
+        "recovered": 4,
+        "rotated": 2,
+        "usable_epochs": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "verifier_consume": 4
+      },
+      "5": {
+        "compromised": 0,
+        "detected": 2,
+        "published": 4,
+        "quarantined": 2,
+        "recovered": 5,
+        "rotated": 3,
+        "usable_epochs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "verifier_consume": 5
+      }
+    }
+  },
+  "version": "V49"
+}
