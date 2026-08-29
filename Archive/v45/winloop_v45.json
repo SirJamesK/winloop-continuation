@@ -1,0 +1,264 @@
+{
+  "admission_contract": {
+    "joint_cut_floor": 21,
+    "nonendpoint_route_cut_floor": 22,
+    "synthetic_lower_cost_floor": 60
+  },
+  "carried_endpoint_theorem": {
+    "endpoint_cut": 21,
+    "fresh_reproof_claimed": false,
+    "source_version": "V13"
+  },
+  "evidence_bound_static": {
+    "admitted": true,
+    "evidence_accepted": true,
+    "joint_cut": 21,
+    "joint_lower_cost": 63,
+    "provenance_cut": 22
+  },
+  "evidence_churn_exact": {
+    "capability_binding_swap_rejected": true,
+    "covered_primitive_roots": 24,
+    "current_2of3_dual_log_snapshot_accepted": true,
+    "one_issuer_source_loss_tolerated": true,
+    "single_log_partition_rejected": true,
+    "stale_or_tampered_evidence_rejected": true,
+    "two_issuer_source_loss_rejected": true
+  },
+  "evidence_contract": {
+    "covered_primitive_roots": 24,
+    "freshness": "max age 1 epoch; ceremony/issuance-local age 0",
+    "logical_quorum": "2-of-3 seats per primitive root",
+    "required_logs": [
+      "log_alpha",
+      "log_beta"
+    ],
+    "rotation_semantics": "key rotations and member replacements retain logical seat identity so overlap cannot inflate quorum weight",
+    "seal_semantics": "deterministic model binding only; not production cryptography"
+  },
+  "headline": "V45 adds monotonic revocation and cross-log prefix/equivocation checks plus seat-preserving issuer rotation: revoked credentials cannot regain quorum, overlap cannot double-count, strict evidence remains joint 21/provenance 22, while correlated three-root verifier delays reduce provenance to 19 and synthetic lower cost to 57.",
+  "merkle_resource_accounting": {
+    "all3_signature_verifications_full_snapshot": 384,
+    "avg_inclusion_proof_hashes": 7,
+    "ephemeral_full_tree_bytes": 8160,
+    "internal_hashes_per_full_rebuild": 127,
+    "leaf_hashes_per_full_rebuild": 128,
+    "materialized_single_log_proof_bytes": 28672,
+    "minimum_2of3_signature_verifications_full_snapshot": 256,
+    "persistent_frontier_root_bytes": 32,
+    "persistent_reduction_fraction": 0.9988839285714286,
+    "reference_changed_statement_plus_dual_log_proof_bytes": 489,
+    "shared_audit_messages_formula": "132 + 4*k",
+    "statements": 128
+  },
+  "next_priorities": [
+    "Replace the deterministic hash-chain consistency witness with explicit Merkle inclusion/consistency proof generation and verification while preserving fail-closed dual-log semantics.",
+    "Model issuer-seat common CA/HSM/operator dependencies so a nominal 2-of-3 quorum cannot hide correlated signing authority.",
+    "Add witness/monitor quorum and delayed-gossip schedules for split-view detection, including verifier fail-closed deadlines.",
+    "Optimize temporal attack schedules jointly over root cardinality and lower/nominal/upper synthetic cost instead of evaluating fixed correlated-delay scenarios."
+  ],
+  "recursive_capability_graph": {
+    "all_nonendpoint_primitive_roots": 24,
+    "common_privileged_fabric_primitive_roots": 11,
+    "dependency_cycle_rejected": true,
+    "nonprimitive_capabilities": 6,
+    "unknown_capability_rejected": true
+  },
+  "revocation_rotation_consistency_exact": {
+    "baseline_current_snapshot_accepted": true,
+    "consistency_model": "append-only deterministic hash-chain witness; RFC9162-style monotonic/prefix semantics, not a production Merkle consistency proof",
+    "cross_log_equivocation_rejected": true,
+    "cross_log_prefix_growth_accepted": true,
+    "key_rotation_overlap_preserves_quorum": true,
+    "ledger_rollback_rejected_after_observation": true,
+    "old_key_rejected_after_effective_revocation": true,
+    "one_revoked_issuer_key_quorum_survives": true,
+    "overlapping_keys_same_seat_do_not_double_count": true,
+    "quorum_member_replacement_overlap_preserves_quorum": true,
+    "replacement_overlap_same_seat_does_not_double_count": true,
+    "revoked_key_fresh_replay_cannot_restore_quorum": true,
+    "successor_key_accepts_after_old_key_revocation": true,
+    "two_revoked_issuer_keys_break_quorum": true
+  },
+  "routing": {
+    "active_design": "carried V21 guarded router",
+    "replacement_merged": false
+  },
+  "runtime": {
+    "new_nonstationary_routing_envelope_claimed": false,
+    "reason": "V45 advances revocation/log consistency, quorum rotation, and robust temporal costs; V21 routing remains active."
+  },
+  "second_order_common_control_exact": {
+    "baseline_independence_evidence": {
+      "admitted": true,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 22
+    },
+    "fabric_local_and_privileged_tenant_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "hsm_custody_and_issuance_rotation_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "hsm_management_and_operator_iam_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "missing_independence_evidence_fails_closed": {
+      "admitted": false,
+      "evidence_accepted": false
+    },
+    "operator_key_and_hsm_custody_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "provider_build_and_cloud_pam_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    },
+    "provider_local_and_ca_ceremony_share_control": {
+      "admitted": false,
+      "evidence_accepted": true,
+      "joint_cut": 21,
+      "joint_lower_cost": 63,
+      "provenance_cut": 21
+    }
+  },
+  "staged_temporal_robust_cost_exact": {
+    "all_root_three_epoch_reuse": {
+      "endpoint_cost": {"lower": 21, "nominal": 28, "upper": 42},
+      "endpoint_peak": 7,
+      "joint_cost": {"lower": 21, "nominal": 28, "upper": 42},
+      "joint_peak": 7,
+      "provenance_cost": {"lower": 22, "nominal": 30, "upper": 44},
+      "provenance_peak": 8,
+      "temporal_admitted": false,
+      "winner": "endpoint"
+    },
+    "all_root_two_epoch_reuse": {
+      "endpoint_cost": {"lower": 32, "nominal": 42, "upper": 63},
+      "endpoint_peak": 11,
+      "joint_cost": {"lower": 32, "nominal": 42, "upper": 63},
+      "joint_peak": 11,
+      "provenance_cost": {"lower": 33, "nominal": 44, "upper": 66},
+      "provenance_peak": 11,
+      "temporal_admitted": false,
+      "winner": "endpoint_tie"
+    },
+    "ceremony_expiry_caps_long_revoke_chain": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_peak": 21,
+      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_peak": 22,
+      "temporal_admitted": true,
+      "winner": "endpoint"
+    },
+    "cost_semantics": "synthetic lower/nominal/upper 3/4/6 per primitive compromise; model parameters, not empirical attacker prices",
+    "derived_caps": {"ceremony_lifetime": 1, "stale_auth_lifetime": 2},
+    "four_deep_roots_correlated_slow_consumption": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 54, "nominal": 72, "upper": 108},
+      "joint_peak": 18,
+      "provenance_cost": {"lower": 54, "nominal": 72, "upper": 108},
+      "provenance_peak": 18,
+      "temporal_admitted": false,
+      "winner": "provenance"
+    },
+    "four_deep_roots_fast_consumption": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_peak": 21,
+      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_peak": 22,
+      "temporal_admitted": true,
+      "winner": "endpoint"
+    },
+    "hsm_cluster_correlated_slow_consumption": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "joint_peak": 19,
+      "provenance_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "provenance_peak": 19,
+      "temporal_admitted": false,
+      "winner": "provenance"
+    },
+    "one_deep_root_slow_verifier_consumption": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_peak": 21,
+      "provenance_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "provenance_peak": 21,
+      "temporal_admitted": false,
+      "winner": "endpoint_tie"
+    },
+    "provider_cluster_correlated_slow_consumption": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "joint_peak": 19,
+      "provenance_cost": {"lower": 57, "nominal": 76, "upper": 114},
+      "provenance_peak": 19,
+      "temporal_admitted": false,
+      "winner": "provenance"
+    },
+    "stale_authorization_ttl_caps_long_revoke_chain": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_peak": 21,
+      "provenance_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "provenance_peak": 21,
+      "temporal_admitted": false,
+      "winner": "endpoint_tie"
+    },
+    "strict": {
+      "endpoint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "endpoint_peak": 21,
+      "joint_cost": {"lower": 63, "nominal": 84, "upper": 126},
+      "joint_peak": 21,
+      "provenance_cost": {"lower": 66, "nominal": 88, "upper": 132},
+      "provenance_peak": 22,
+      "temporal_admitted": true,
+      "winner": "endpoint"
+    }
+  },
+  "static_exact": {
+    "admitted": true,
+    "joint_cut": 21,
+    "joint_lower_cost": 63,
+    "nonendpoint": {
+      "downstream_pam_plane": {"lower_cost": 69, "nominal_cost": 92, "root_count": 23, "upper_cost": 138},
+      "issuance_ceremony": {"lower_cost": 69, "nominal_cost": 92, "root_count": 23, "upper_cost": 138},
+      "recursive_common_fabric": {"lower_cost": 66, "nominal_cost": 88, "root_count": 22, "upper_cost": 132}
+    },
+    "nonendpoint_winner": "recursive_common_fabric",
+    "provenance_cut": 22
+  },
+  "validation_digest_sha256": "c59a118188aa555fb5f41699072646c9332c0a522b95cc97a4b58978a8154b97",
+  "version": "V45"
+}
