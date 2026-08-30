@@ -1,0 +1,159 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "c9a88403f543d13783c21aa19308f35ba9ffb403ef76c7f06119b22916f992b5",
+    "implementation_sha256": "ff517f4bd1ebc7d75c848ce09f403e8ba7ed386edd4fc168383faccb2111c7b5",
+    "version": "V59"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "consecutive_rotation_catchup": {
+    "accepted": 512,
+    "availability_modes": [
+      "all3",
+      "one_missing_1",
+      "one_missing_2",
+      "one_missing_3",
+      "two_missing",
+      "stale_presented",
+      "fork_presented",
+      "old_majority"
+    ],
+    "chain_links_hash_bound": true,
+    "checks": {
+      "compromised_old_witness_majority_reject": true,
+      "forked_history_root_evidence_reject": true,
+      "missing_roster_transition_reject": true,
+      "offline_cached_chain_accept": true,
+      "replayed_intermediate_terminal_reject": true,
+      "same_chain_reject_after_deadline": true,
+      "two_consecutive_rotations_accept_at_deadline": true
+    },
+    "deadline": 3,
+    "delay_domain": [
+      0,
+      5
+    ],
+    "fork_terminal_acceptances": 0,
+    "offline_catchup_recoveries": 384,
+    "old_witness_majority_acceptances": 0,
+    "patterns": 192000,
+    "post_deadline_acceptances": 0,
+    "replayed_intermediate_terminal_acceptances": 0,
+    "shared_deadline_not_per_stage": true,
+    "simultaneous_single_root_plus_single_new_witness_loss_recoveries": 288,
+    "stage_authority_disappearance_recoveries": 448,
+    "stage_states": [
+      "canonical",
+      "absent_cached_canonical",
+      "missing",
+      "stale_replay",
+      "fork"
+    ],
+    "terminal_states": [
+      "canonical_e10",
+      "replay_e9",
+      "fork_e10",
+      "missing"
+    ]
+  },
+  "digest": "468245d5566e27b49ad5ef612e04859f2fe3ab0965bbfd1c8fe9fc3ac0f00729",
+  "headline": "V60 separately roots witness-roster churn and composes two consecutive issuer rotations: 500 root-history cases admit only 8 canonical states with zero stale/forked roster acceptance, while 192,000 offline catch-up/replay/partition cases admit 512 chains only through the canonical epoch-9\u2192roster-10\u2192epoch-10 hash path within one shared 3-step deadline, with zero intermediate-replay, old-witness-majority, fork-terminal, or post-deadline acceptance.",
+  "next": [
+    "rotate the separate witness-history root authorities themselves and test recursive root-of-root churn without circular trust",
+    "extend catch-up across three or more consecutive issuer/witness rotations with compacted checkpoints and mixed-generation recovery",
+    "model verifier checkpoint rollback/equivocation across populations under partial history retention and source disappearance",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "required_binding": [
+      "provider identity",
+      "hardware custody",
+      "operator authority",
+      "issuer/source",
+      "subject",
+      "epoch",
+      "binding hash"
+    ],
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v59_regression_preserved": true
+  },
+  "version": "V60",
+  "witness_roster_history": {
+    "accepted": 8,
+    "authority_disappearance_recoveries": 4,
+    "authority_states": [
+      "canonical",
+      "absent_cached_canonical",
+      "stale_replay",
+      "fork"
+    ],
+    "checks": {
+      "cached_transition_survives_history_authority_disappearance": true,
+      "forked_roster_reject": true,
+      "presented_old_root_generation_reject": true,
+      "single_root_authority_reject": true,
+      "stale_roster_replay_reject": true,
+      "tampered_roster_binding_reject": true,
+      "two_root_authorities_accept": true
+    },
+    "forked_roster_acceptances": 0,
+    "history_root_separate_from_membership_witnesses": true,
+    "new_roster": [
+      "witness2",
+      "witness3",
+      "witness4"
+    ],
+    "old_roster": [
+      "witness1",
+      "witness2",
+      "witness3"
+    ],
+    "patterns": 500,
+    "root_authorities": [
+      "historyRootA",
+      "historyRootB",
+      "historyRootC"
+    ],
+    "root_certificate_states": [
+      "current",
+      "absent",
+      "stale_epoch",
+      "old_generation",
+      "fork"
+    ],
+    "root_quorum": 2,
+    "stale_roster_acceptances": 0
+  }
+}
