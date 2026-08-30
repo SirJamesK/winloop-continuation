@@ -1,0 +1,143 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "66c617a9972e89c527e35beee814d16822326c6548c277462d00314748fb70c5",
+    "implementation_sha256": "864db53ceae4a988db3eb2df78ebf067192cd5f11483767d01b6264ffb25b698",
+    "version": "V62"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "6bebeb48bcda3d1dd9f093727e416f92b692e898d54236f9dde95dbe2f3269a9",
+  "disjoint_horizon_witness_rotation": {
+    "accepted": 2192,
+    "checks": {
+      "disjoint_sets": true,
+      "dual_quorum_accept": true,
+      "fork_reject": true,
+      "new_only_reject": true,
+      "new_provider_plus_root_loss_cached_accept": true,
+      "no_old_pin_reject": true,
+      "old_provider_plus_root_loss_cached_accept": true,
+      "overlap_self_bootstrap_impossible": true,
+      "stale_reject": true
+    },
+    "fork_acceptances": 0,
+    "new_anchor": "48827553f9bc827307a0bda2dc1def4cd12ea3948651dbd3186c303e5351973d",
+    "new_only_or_unpinned_acceptances": 0,
+    "new_provider_loss_recoveries": 280,
+    "new_provider_plus_root_source_loss_recoveries": 140,
+    "new_witness_set": [
+      "horizonWitnessE",
+      "horizonWitnessF",
+      "horizonWitnessG"
+    ],
+    "old_provider_loss_recoveries": 280,
+    "old_provider_plus_root_source_loss_recoveries": 140,
+    "old_witness_set": [
+      "horizonWitnessB",
+      "horizonWitnessC",
+      "horizonWitnessD"
+    ],
+    "patterns": 2343750,
+    "quorum_each": 2,
+    "rotation_hash": "dde3237f0ef45cfaa2caba591f9a482dd566e92417e1cdeb7ae7e722a4eb830c",
+    "sets_disjoint": true,
+    "stale_acceptances": 0
+  },
+  "headline": "V63 rotates the long-horizon witness set to a disjoint 2-of-3 old/new handoff: 2,343,750 witness/provider/root-loss cases admit 2,192 states, including 140 old-provider-plus-root-source-loss recoveries, with zero stale, fork, or unpinned/new-only acceptance; 1,638,400 three-generation tombstone/compaction cases admit 4,480 states with zero deadline-reset or live-revocation-erasure acceptance; and 2,488,320 five-population verifier cases admit 81,440 states including 3,800 explicit two-quarantine reconfigurations with zero untrusted-join quorum inflation, invalid-state, membership-fork, below-threshold-history, or post-deadline acceptance.",
+  "next": [
+    "bind disjoint long-horizon witness rotation to independently evidenced provider/operator/hardware identities before raising cross-role credit",
+    "extend tombstone-preserving compaction across anchor epoch 15 with concurrent revocation and delayed source disappearance",
+    "test 3-of-5 verifier recovery under one Byzantine fork plus two quarantines and a joining population without quorum-credit inflation",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "disjoint_modeled_roles_are_not_external_independence_proof": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v62_regression_preserved": true
+  },
+  "tombstone_anchor_history": {
+    "accepted": 4480,
+    "anchor_generations": 3,
+    "checks": {
+      "cp12_tombstone_compaction_accept": true,
+      "cp13_tombstone_compaction_accept": true,
+      "deadline_not_reset": true,
+      "full_chain_accept": true,
+      "invalid_history_reject": true,
+      "live_revocation_tombstone_erasure_reject": true,
+      "missing_tombstone_reject": true,
+      "stale_clear_reject": true
+    },
+    "cp12_tombstone_recoveries": 1280,
+    "cp13_tombstone_recoveries": 640,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "live_revocation_erasure_acceptances": 0,
+    "live_revocation_recoveries": 2240,
+    "missing_tombstone_acceptances": 0,
+    "patterns": 1638400,
+    "post_deadline_acceptances": 0,
+    "shared_deadline": 3,
+    "stale_or_fork_clear_acceptances": 0
+  },
+  "two_quarantine_verifier_reconfiguration": {
+    "accepted": 81440,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "below_threshold_history_reject": true,
+      "invalid_state_reject": true,
+      "membership_fork_reject": true,
+      "shared_deadline_reject": true,
+      "two_quarantine_reconfig_accept": true,
+      "two_quarantine_without_third_good_reject": true,
+      "untrusted_join_not_counted": true,
+      "untrusted_join_present_but_ignored_accept": true
+    },
+    "delayed_recoveries": 73296,
+    "explicit_two_quarantine_reconfig_recoveries": 3800,
+    "invalid_state_acceptances": 0,
+    "membership_fork_acceptances": 0,
+    "patterns": 2488320,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "shared_deadline": 3,
+    "two_or_more_quarantine_recoveries": 13100,
+    "untrusted_join_present_but_not_counted_recoveries": 43150,
+    "untrusted_join_quorum_credit_acceptances": 0,
+    "validated_join_recoveries": 70140
+  },
+  "version": "V63"
+}
