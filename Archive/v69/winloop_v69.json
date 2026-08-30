@@ -1,0 +1,178 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "a1cdcf9262a92b50f572c221d204d980e5add5cbad92e15976e8e0bb9830581b",
+    "implementation_sha256": "ae4d1400e85b33613e52542073b47b6b483d994ef773df8d84d8fdc52dfd0d14",
+    "version": "V68"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "0e7cb57a476db0dc3933613f8305b15947261f42578ba7a9c94679b6c57c1d12",
+  "fourth_byzantine_eviction_identity_recycling": {
+    "accepted": 1111824,
+    "accepted_base_membership_states": 19854,
+    "active_byzantine_acceptances_after_eviction": 0,
+    "admissible_shared_deadline_vectors": 56,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "active_byz_reject": true,
+      "below_threshold_reject": true,
+      "evict4_one_loss_accept": true,
+      "join4_recycle_accept": true,
+      "recycle_prepare_accept": true,
+      "self_authorized_reject": true,
+      "tombstone_bypass_reject": true,
+      "two_loss_reject": true
+    },
+    "delay_vectors": 1024,
+    "fourth_eviction_recoveries": 40320,
+    "fourth_eviction_with_one_honest_verifier_loss_recoveries": 26880,
+    "fourth_join_recycled_identity_recoveries": 40320,
+    "max_honest_verifier_losses": 1,
+    "membership_or_eviction_fork_acceptances": 0,
+    "one_honest_verifier_loss_recoveries": 741216,
+    "patterns": 583087267840,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "recycle_prepare_recoveries": 60480,
+    "recycled_identity_self_authorization_acceptances": 0,
+    "rollback_chain_bypass_acceptances": 0,
+    "shared_deadline": 3,
+    "tombstone_bypass_acceptances": 0,
+    "two_honest_verifier_loss_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0
+  },
+  "headline": "V69 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-20 GC to 565,455 of 1,381,100,421,120 states across total source loss, bound source reappearance, and a second cold verifier restart with zero deadline-reset/unbound-reappearance/cold-restart-authority acceptance, admits 120,288 of 1,600,000,000 publication-plus-verifier-rollback/delayed-join states with zero cached-authority, unbound-rollback, or unbound-delayed-join acceptance, and admits 1,111,824 of 583,087,267,840 fourth-Byzantine-eviction states with tombstone-bound identity recycling and zero self-authorization, tombstone bypass, threshold reduction, or active-Byzantine acceptance.",
+  "independence_certificate_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "checks": {
+      "absent_reject": true,
+      "alias_reject": true,
+      "cached_external_accept": true,
+      "current_external_accept": true,
+      "fork_reject": true,
+      "self_asserted_reject": true,
+      "stale_reject": true
+    },
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 21 across repeated source disappearance/reappearance with mixed verifier cache generations",
+    "compose publication and verifier rollback recovery with two delayed join generations and source replacement",
+    "test fifth Byzantine eviction with recycled identity collision and concurrent verifier loss",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication_verifier_rollback_delayed_join": {
+    "accepted": 120288,
+    "accepted_base_recovery_states": 2148,
+    "admissible_shared_deadline_vectors": 56,
+    "cached_authority_promotion_acceptances": 0,
+    "cached_join_evidence_recoveries": 59808,
+    "checks": {
+      "baseline_accept": true,
+      "cached_authority_reject": true,
+      "delayed_join_joint_rollback_accept": true,
+      "joint_rollback_accept": true,
+      "rollback_without_quorum_reject": true,
+      "unbound_delayed_join_reject": true,
+      "unbound_verifier_rollback_reject": true
+    },
+    "delay_vectors": 1024,
+    "delayed_join_evidence_recoveries": 672,
+    "fork_acceptances": 0,
+    "joint_publication_verifier_rollback_recoveries": 4704,
+    "joint_rollback_delayed_join_recoveries": 672,
+    "patterns": 1600000000,
+    "post_deadline_acceptances": 0,
+    "publication_quorum": 2,
+    "publication_rollback_recoveries": 12768,
+    "rollback_without_publication_quorum_acceptances": 0,
+    "shared_deadline": 3,
+    "unbound_delayed_join_acceptances": 0,
+    "unbound_verifier_rollback_acceptances": 0,
+    "verifier_population_rollback_recoveries": 4704,
+    "verifier_populations": 3
+  },
+  "recursive_publication_recovery_evidence": {
+    "cached_evidence_never_promoted_to_authority": true,
+    "cold_restart_never_promoted_to_authority": true,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "provider_operator_hardware_binding_required": true,
+    "publication_and_verifier_rollbacks_must_share_bound_recovery": true,
+    "reappearance_requires_pre_loss_binding": true,
+    "recycled_identity_requires_tombstone_bound_reentry": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "tombstone_epoch20": {
+    "accepted": 565455,
+    "accepted_base_history_states": 3427,
+    "admissible_shared_deadline_vectors": 165,
+    "bound_replacement_source_recoveries": 228030,
+    "cached_clear20_after_total_source_loss_recoveries": 495,
+    "checks": {
+      "cold2_old_bridge_delayed_clear_reject": true,
+      "combined_accept": true,
+      "fork_reject": true,
+      "full_accept": true,
+      "reappearance_accept": true,
+      "second_cold_accept": true,
+      "total_loss_accept": true,
+      "unbound_reappearance_reject": true
+    },
+    "complete_source_disappearance_recoveries": 2475,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 65536,
+    "fork_acceptances": 0,
+    "live_clear20_after_bound_reappearance_recoveries": 4950,
+    "patterns": 1381100421120,
+    "post_deadline_acceptances": 0,
+    "reappearance_second_cold_restart_recoveries": 5940,
+    "second_cold_restart_as_authority_acceptances": 0,
+    "second_cold_verifier_restart_recoveries": 28380,
+    "shared_deadline": 3,
+    "source_reappearance_recoveries": 23760,
+    "stale_or_fork_clear_acceptances": 0,
+    "unbound_reappearance_acceptances": 0,
+    "unpinned_total_loss_acceptances": 0
+  },
+  "version": "V69"
+}
