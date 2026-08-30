@@ -1,0 +1,158 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "df35c786955dd2f202c493be6a67a6eee32be8f37ede43a204b8be72a16c0c62",
+    "implementation_sha256": "dfd71b33ba7fbef697d3c2a256b5ce7b314110fd323e21f200d8d8cca92fa835",
+    "version": "V66"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "consecutive_byzantine_eviction_join_rollback": {
+    "accepted": 187800,
+    "accepted_base_membership_states": 9390,
+    "active_byzantine_acceptances_after_eviction": 0,
+    "admissible_shared_deadline_vectors": 20,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "active_byz_reject": true,
+      "evict1_accept": true,
+      "evict2_accept": true,
+      "join1_accept": true,
+      "join2_accept": true,
+      "rollback_one_loss_accept": true,
+      "rollback_without_bridge_reject": true,
+      "two_loss_reject": true
+    },
+    "delay_vectors": 64,
+    "join_rollback_recoveries": 9600,
+    "max_honest_verifier_losses": 1,
+    "membership_or_eviction_fork_acceptances": 0,
+    "one_honest_verifier_loss_recoveries": 128400,
+    "patterns": 900000000,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "replacement_self_authorization_acceptances": 0,
+    "second_eviction_recoveries": 28800,
+    "shared_deadline": 3,
+    "two_honest_verifier_loss_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0
+  },
+  "digest": "972ae30b001ead74b4ec3dff9fa9239343618949218a4551d43d0596209f1162",
+  "dual_proof_source_loss_rollback": {
+    "accepted": 88000,
+    "accepted_base_publication_states": 4400,
+    "admissible_shared_deadline_vectors": 20,
+    "cached_authority_promotion_acceptances": 0,
+    "checks": {
+      "cached_authority_reject": true,
+      "fork_reject": true,
+      "rollback_accept": true,
+      "two_loss_accept": true,
+      "two_rollback_reject": true
+    },
+    "delay_vectors": 64,
+    "fork_acceptances": 0,
+    "max_tolerated_rollback_views": 1,
+    "one_rollback_view_recoveries": 24000,
+    "patterns": 63221760,
+    "post_deadline_acceptances": 0,
+    "publication_quorum": 2,
+    "replacement_source_recoveries": 21120,
+    "shared_deadline": 3,
+    "stale_or_missing_eviction_proof_acceptances": 0,
+    "two_proof_source_loss_recoveries": 3520,
+    "untrusted_or_conflicting_join_acceptances": 0,
+    "verifier_populations": 3
+  },
+  "headline": "V67 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-18 GC to 206,808 of 8,808,038,400 states across dual source replacement and verifier restart with zero deadline-reset/stale/fork or restart-as-authority acceptance, admits 88,000 of 63,221,760 two-proof-source-loss/rollback states with zero cached-authority promotion or post-deadline acceptance, and admits 187,800 of 900,000,000 consecutive-Byzantine-eviction/join-rollback states under one honest verifier loss with zero threshold reduction or active-Byzantine acceptance.",
+  "independence_certificate_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "checks": {
+      "absent_reject": true,
+      "alias_reject": true,
+      "cached_external_accept": true,
+      "current_external_accept": true,
+      "fork_reject": true,
+      "self_asserted_reject": true,
+      "stale_reject": true
+    },
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 19 across complete dual-source disappearance and cold verifier restart",
+    "compose two proof-source losses with simultaneous publication-root rollback without cached-authority promotion",
+    "test third Byzantine eviction after rollback recovery with one honest verifier loss",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "cached_evidence_never_promoted_to_authority": true,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "provider_operator_hardware_binding_required": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "tombstone_epoch18": {
+    "accepted": 206808,
+    "accepted_base_history_states": 2462,
+    "admissible_shared_deadline_vectors": 84,
+    "both_old_sources_lost_cached_recoveries": 5880,
+    "checks": {
+      "deadline_missing_reject": true,
+      "dual_replace_clear_accept": true,
+      "fork_reject": true,
+      "full_accept": true,
+      "restart16_delayed_clear_reject": true,
+      "restart_bridge_accept": true
+    },
+    "clear18_after_source_replacement_recoveries": 1008,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 4096,
+    "dual_source_replacement_recoveries": 9072,
+    "fork_acceptances": 0,
+    "patterns": 8808038400,
+    "post_deadline_acceptances": 0,
+    "restart_as_new_authority_acceptances": 0,
+    "shared_deadline": 3,
+    "stale_or_fork_clear_acceptances": 0,
+    "verifier_restart_recoveries": 16296
+  },
+  "version": "V67"
+}
