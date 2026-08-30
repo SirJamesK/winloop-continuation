@@ -1,0 +1,140 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "6bebeb48bcda3d1dd9f093727e416f92b692e898d54236f9dde95dbe2f3269a9",
+    "implementation_sha256": "48feb8ecaa02a39725333c300ef848eff045fb25cf567f057665652359e49813",
+    "version": "V63"
+  },
+  "byzantine_quarantine_join": {
+    "accepted": 237320,
+    "accepted_base_membership_states": 23732,
+    "active_byzantine_acceptances": 0,
+    "admissible_shared_deadline_vectors": 10,
+    "base_membership_states": 622080,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "active_byzantine_reject": true,
+      "below_threshold_history_reject": true,
+      "byzantine_evict_two_quarantine_join_accept": true,
+      "cached_eviction_proof_accept": true,
+      "membership_fork_reject": true,
+      "missing_eviction_proof_reject": true,
+      "shared_deadline_not_reset": true,
+      "untrusted_join_not_counted": true
+    },
+    "delay_vectors": 16,
+    "delayed_recoveries": 213588,
+    "membership_fork_acceptances": 0,
+    "one_byzantine_two_quarantine_join_recoveries": 9000,
+    "patterns": 9953280,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "shared_deadline": 3,
+    "stale_or_missing_eviction_proof_acceptances": 0,
+    "untrusted_join_present_but_ignored_recoveries": 116400,
+    "untrusted_join_quorum_credit_acceptances": 0
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "e3e090ea32f151975631636e7fc62e3c5784fa29d62cfeb4a9c73a0b983bd810",
+  "headline": "V64 makes provider/operator/hardware independence an explicit fail-closed gate: 5,832,000 identity-evidence cases admit only 145 hypothetical fully bound states while committed external evidence remains absent and cross-role credit stays 12; epoch-15 tombstone compaction admits 29,100 of 14,155,776 states, including 20 concurrent-revocation recoveries after pre-15 source disappearance, with zero deadline-reset, stale/fork-clear, invalid-history, or forked-source acceptance; and Byzantine-evicting 3-of-5 recovery admits 237,320 of 9,953,280 states including 9,000 one-Byzantine/two-quarantine/join recoveries with zero active-Byzantine, stale/missing-eviction-proof, quorum-inflation, membership-fork, or post-deadline acceptance.",
+  "identity_binding_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "binding_source_fork_acceptances": 0,
+    "both_sides_source_loss_recoveries": 1,
+    "checks": {
+      "cached_both_sides_source_loss_recovers": true,
+      "fully_bound_external_state_admits_hypothetically": true,
+      "provider_alias_reject": true,
+      "self_asserted_reject": true,
+      "source_fork_reject": true,
+      "stale_bridge_reject": true,
+      "unknown_relation_reject": true
+    },
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 145,
+    "modeled_disjointness_alone_insufficient": true,
+    "new_source_loss_recoveries": 8,
+    "old_source_loss_recoveries": 8,
+    "patterns": 5832000,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require a committed independently validated provider/operator/hardware independence certificate before any cross-role credit increase",
+    "extend tombstone garbage-collection proof through anchor epoch 16 with overlapping revocation clear, delayed publication, and proof-source churn",
+    "split-view test Byzantine eviction-proof publication across verifier populations before and after a validated join",
+    "test two consecutive joining populations without allowing transient membership to inflate a 3-of-5 quorum",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "modeled_disjoint_roles_are_not_external_independence_proof": true,
+    "provider_operator_hardware_binding_required": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v63_regression_preserved": true
+  },
+  "tombstone_epoch15": {
+    "accepted": 29100,
+    "accepted_base_history_states": 1455,
+    "admissible_shared_deadline_vectors": 20,
+    "base_history_states": 221184,
+    "checks": {
+      "compact_behind_t14_accept": true,
+      "deadline_not_reset": true,
+      "deadline_origin_missing_reject": true,
+      "full_epoch15_chain_accept": true,
+      "invalid_history_reject": true,
+      "pre15_source_disappearance_cached_accept": true,
+      "source_fork_reject": true,
+      "stale_clear_reject": true
+    },
+    "compact_behind_t14_recoveries": 1000,
+    "concurrent_revocation_recoveries": 5820,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 64,
+    "delayed_recoveries": 27645,
+    "forked_source_or_compaction_acceptances": 0,
+    "invalid_history_acceptances": 0,
+    "patterns": 14155776,
+    "post_deadline_acceptances": 0,
+    "pre15_source_disappearance_concurrent_revocation_recoveries": 20,
+    "pre15_source_disappearance_recoveries": 100,
+    "shared_deadline": 3,
+    "stale_or_fork_clear_acceptances": 0
+  },
+  "version": "V64"
+}
