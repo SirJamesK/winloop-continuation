@@ -1,0 +1,128 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "asynchronous_verifier_churn": {
+    "accepted": 12710,
+    "active_fork_acceptances": 0,
+    "checks": {
+      "active_fork_reject": true,
+      "below_threshold_reject": true,
+      "membership_fork_reject": true,
+      "quarantined_byzantine_accept": true,
+      "rollback_reject": true,
+      "shared_delay_reject": true,
+      "threshold_cached_accept": true,
+      "untrusted_join_not_counted": true,
+      "validated_join_leave_accept": true
+    },
+    "delayed_compaction_publication_recoveries": 7626,
+    "join_churn_recoveries": 9620,
+    "leave_join_recoveries": 3040,
+    "membership_fork_or_below_threshold_acceptances": 0,
+    "patterns": 3072000,
+    "post_deadline_acceptances": 0,
+    "quarantined_byzantine_recoveries": 4400,
+    "quorum": 3,
+    "rollback_acceptances": 0,
+    "shared_deadline": 3,
+    "threshold_fragment_recoveries": 6500,
+    "untrusted_join_present_but_not_counted_recoveries": 2200
+  },
+  "base": {
+    "digest": "360d9f05a3bc7dfaf8805229ba5b57b657f046715abf56195b8b58af43ebd9ec",
+    "implementation_sha256": "278cde2efdf0ef256cb9ecffc0efae545318b0b0d1f0c6e1cdd4694ae6520c52",
+    "version": "V61"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "66c617a9972e89c527e35beee814d16822326c6548c277462d00314748fb70c5",
+  "headline": "V62 rotates the locally pinned root-history anchor through an independently witnessed long-horizon handoff: 468,750 anchor cases admit 45 states including 18 recoveries after all pre-rotation online root sources disappear with zero self-authorized new-anchor acceptance; 2,343,750 multi-layer compaction cases admit 1,600 states with zero deadline-reset acceptance, and 3,072,000 asynchronous verifier-churn cases admit 12,710 quorum-safe recoveries with zero rollback, active-fork, membership-fork, or post-deadline acceptance.",
+  "long_horizon_anchor_rotation": {
+    "accepted": 45,
+    "all_pre_rotation_online_source_loss_recoveries": 18,
+    "checks": {
+      "all_old_sources_lost_with_pin_accept": true,
+      "dual_witness_boundary_accept": true,
+      "fork_reject": true,
+      "new_anchor_self_authorization_reject": true,
+      "no_old_pin_reject": true,
+      "publisher_lost_cached_accept": true,
+      "stale_reject": true
+    },
+    "fork_acceptances": 0,
+    "new_anchor_cannot_self_authorize": true,
+    "new_long_horizon_anchor": "e5fd044225be5eaed9eb0b7ed3a59cc143803969859494656ed62fc70ed665a6",
+    "old_pinned_checkpoint": "b36e05c650859d4bb3fb9f77b28747ca3b02f2c701d064e0196fae8d127fad0d",
+    "patterns": 468750,
+    "publisher_loss_cached_recoveries": 9,
+    "quorum": 2,
+    "self_or_new_only_acceptances": 0,
+    "stale_acceptances": 0,
+    "transition_hash": "27a2a0c64a47b9be61e5c437ba4582841a3238f148169cc765e36fbd41c59f46",
+    "v61_checkpoint11": "ec15f901617afb34e84932baaef2b2be56ec54f9ac25fe31b4dfd1004b087c39"
+  },
+  "multi_layer_compaction": {
+    "accepted": 1600,
+    "checks": {
+      "below_threshold_reject": true,
+      "fork_fragment_reject": true,
+      "individually_timely_over_budget_reject": true,
+      "intermediate_no_reset": true,
+      "stale_reject": true,
+      "threshold_fragments_accept": true,
+      "two_layer_accept": true
+    },
+    "cp10_cp11_compacted_recoveries": 160,
+    "cp11_cp12_compacted_recoveries": 160,
+    "deadline_reset_acceptances": 0,
+    "multiple_compaction_layers": 2,
+    "offline_or_delayed_recoveries": 1520,
+    "patterns": 2343750,
+    "post_deadline_acceptances": 0,
+    "shared_deadline": 3,
+    "stale_or_fork_acceptances": 0,
+    "threshold_fragment_recoveries": 640
+  },
+  "next": [
+    "rotate the long-horizon witness set itself without overlap self-bootstrap and test simultaneous witness-provider plus root-source loss",
+    "extend compacted anchor history across multiple anchor generations with deletion/tombstone proofs that preserve the original revocation deadline",
+    "model two simultaneous verifier-population quarantines and threshold reconfiguration without counting untrusted joiners",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "independent_witness_role_is_modeled_not_external_independence_proof": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v61_regression_preserved": true
+  },
+  "version": "V62"
+}
