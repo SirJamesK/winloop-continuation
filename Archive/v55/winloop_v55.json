@@ -1,0 +1,352 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "d3466a473a016f5555b7a3b758cd8ca8af5b37f4b9641578b012ccce02149ba7",
+    "implementation_sha256": "9148d974d63808fe7beb6cecf3a44102eb412c1e3f5fa10109adc2b2de4a8742",
+    "version": "V54"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "62e0a6e18fc77c4d0d8edb6f4c825dcf719b7b215846de3b88cd6ee1406edda8",
+  "floor1_guard_shocks": {
+    "exact_floor1_capable_cases": 141,
+    "floor": 1,
+    "horizon": 22,
+    "modes": {
+      "both_subroot_families_global": {
+        "both_shocks_min": [
+          737,
+          1,
+          5
+        ],
+        "cases": 15,
+        "group_count_range": [
+          2,
+          2
+        ],
+        "largest_floor_budget_reduction": 40,
+        "nominal_min": [
+          775,
+          2,
+          6
+        ],
+        "smallest_floor_budget_reduction": 38
+      },
+      "one_family_absorbed_into_authority": {
+        "both_shocks_min": [
+          807,
+          2,
+          6
+        ],
+        "cases": 63,
+        "group_count_range": [
+          1,
+          6
+        ],
+        "largest_floor_budget_reduction": 95,
+        "nominal_min": [
+          833,
+          2,
+          6
+        ],
+        "smallest_floor_budget_reduction": 11
+      },
+      "within_each_guard_collapsed": {
+        "both_shocks_min": [
+          661,
+          1,
+          3
+        ],
+        "cases": 63,
+        "group_count_range": [
+          1,
+          6
+        ],
+        "largest_floor_budget_reduction": 158,
+        "nominal_min": [
+          778,
+          2,
+          6
+        ],
+        "smallest_floor_budget_reduction": 21
+      }
+    },
+    "static_rejection_precedes_temporal_reuse": true,
+    "unknown_guard_independence_rejected": true
+  },
+  "headline": "V55 extends the exact 22-root lifetime model to horizon 22 where the irreducible floor first reaches 1 at synthetic budget 851; among 141 admitted floor-1-capable guard graphs, simultaneous family shocks cut the collapsed-guard floor budget by as much as 158, while three split-pin verifier populations fail closed before complete recovery and reject stale/mixed/revoked witness-generation inflation.",
+  "next": [
+    "couple horizon-22 floor-1 exposure to explicit revocation-consumption deadlines under multi-log partial partitions",
+    "extend three-population recovery to independently rotating log and witness generations with cross-population gossip certificates",
+    "seek externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "all_local_absorbed_rejected": true,
+    "common_witness_rejected": true,
+    "conservative_credit": 12,
+    "credit_raised": false,
+    "cuts": {
+      "all_local_absorbed": 8,
+      "common_witness": 11,
+      "fully_independent_chains": 28,
+      "local_chain_absorbed": 12,
+      "provider_witness_shared": 22
+    },
+    "fully_independent_exposed_cut": 28,
+    "reason": "provider/hardware/operator/witness independence is not credited above 12 without independently bound evidence; signed metadata alone is insufficient",
+    "threshold": 10,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_extension": {
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "first_floor1_horizon": 22,
+    "floor1_budget": 851,
+    "horizons": {
+      "10": {
+        "budget": 248,
+        "carried_v54": [
+          3,
+          248
+        ],
+        "floor": 3,
+        "states": 20160075
+      },
+      "11": {
+        "budget": 398,
+        "carried_v54": [
+          2,
+          398
+        ],
+        "floor": 2,
+        "states": 64512240
+      },
+      "12": {
+        "budget": 398,
+        "carried_v54": [
+          2,
+          398
+        ],
+        "floor": 2,
+        "states": 193536720
+      },
+      "13": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 548354040
+      },
+      "14": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 1476337800
+      },
+      "15": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 3796297200
+      },
+      "16": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 9364199760
+      },
+      "17": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 22239974430
+      },
+      "18": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 51021117810
+      },
+      "19": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 113380261800
+      },
+      "2": {
+        "budget": 34,
+        "carried_v54": [
+          11,
+          34
+        ],
+        "floor": 11,
+        "states": 23
+      },
+      "20": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 244662670200
+      },
+      "21": {
+        "budget": 398,
+        "carried_v54": null,
+        "floor": 2,
+        "states": 513791607420
+      },
+      "22": {
+        "budget": 851,
+        "carried_v54": null,
+        "floor": 1,
+        "states": 1052049481860
+      },
+      "3": {
+        "budget": 66,
+        "carried_v54": [
+          8,
+          66
+        ],
+        "floor": 8,
+        "states": 276
+      },
+      "4": {
+        "budget": 102,
+        "carried_v54": [
+          6,
+          102
+        ],
+        "floor": 6,
+        "states": 2300
+      },
+      "5": {
+        "budget": 130,
+        "carried_v54": [
+          5,
+          130
+        ],
+        "floor": 5,
+        "states": 14950
+      },
+      "6": {
+        "budget": 174,
+        "carried_v54": [
+          4,
+          174
+        ],
+        "floor": 4,
+        "states": 80730
+      },
+      "7": {
+        "budget": 174,
+        "carried_v54": [
+          4,
+          174
+        ],
+        "floor": 4,
+        "states": 376740
+      },
+      "8": {
+        "budget": 248,
+        "carried_v54": [
+          3,
+          248
+        ],
+        "floor": 3,
+        "states": 1560780
+      },
+      "9": {
+        "budget": 248,
+        "carried_v54": [
+          3,
+          248
+        ],
+        "floor": 3,
+        "states": 5852925
+      }
+    },
+    "max_horizon": 22,
+    "roots": 22,
+    "v54_h2_h12_regression_preserved": true,
+    "verifier_consumption_remains_operative_gate": true
+  },
+  "three_population_recovery": {
+    "all_shocked_states_fail_closed_before_recovery": true,
+    "all_states_accept_after_complete_recovery": true,
+    "current_distinct_quorum_accepted": true,
+    "duplicate_seat_inflation_rejected": true,
+    "equivocation_rejected": true,
+    "fast_rejects_epoch5_replay": true,
+    "lag65_rejected": true,
+    "max_lag": 64,
+    "mid_and_slow_accept_epoch5": true,
+    "mixed_generation_quorum_inflation_rejected": true,
+    "pins_monotonic": true,
+    "populations": 3,
+    "revoked_current_seat_rejected": true,
+    "shock_trajectories": [
+      {
+        "post_recovery_accepts": 3,
+        "pre_recovery_accepts": 3,
+        "shocks": []
+      },
+      {
+        "post_recovery_accepts": 3,
+        "pre_recovery_accepts": 0,
+        "shocks": [
+          "possession_family_lifetime_shock"
+        ]
+      },
+      {
+        "post_recovery_accepts": 3,
+        "pre_recovery_accepts": 0,
+        "shocks": [
+          "ceremony_family_lifetime_shock"
+        ]
+      },
+      {
+        "post_recovery_accepts": 3,
+        "pre_recovery_accepts": 0,
+        "shocks": [
+          "possession_family_lifetime_shock",
+          "ceremony_family_lifetime_shock"
+        ]
+      }
+    ],
+    "single_current_source_loss_tolerated": true,
+    "split_pins": {
+      "fast": {
+        "A": 6,
+        "B": 5
+      },
+      "mid": {
+        "A": 5,
+        "B": 5
+      },
+      "slow": {
+        "A": 4,
+        "B": 4
+      }
+    },
+    "stale_generation_quorum_rejected": true,
+    "tampered_consistency_chain_rejected": true,
+    "target_epoch": 6,
+    "whole_log_loss_rejected": true
+  },
+  "version": "V55"
+}
