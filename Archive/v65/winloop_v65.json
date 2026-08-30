@@ -1,0 +1,166 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "e3e090ea32f151975631636e7fc62e3c5784fa29d62cfeb4a9c73a0b983bd810",
+    "implementation_sha256": "08e3e20a809d7df1600f9117238a8da1747333daaffed9d4c3f7838b5c256540",
+    "version": "V64"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "90c0b1862ec4d81b1e60e20334fa4f02bf6bbb410ae0db520017ffeb4db805d6",
+  "headline": "V65 keeps cross-role credit at 12 because no committed independent provider/operator/hardware certificate exists, extends anchor GC through epoch 16 with 22,050 of 47,185,920 states admitted and zero deadline-reset/stale/fork acceptance, admits 5,120 of 884,736 split-view eviction/join publication states with zero fork, stale-proof, pre-join, or post-deadline acceptance, and admits 196,140 of 26,891,200 two-generation 3-of-5 membership states including 25,500 consecutive-join recoveries with zero transient-quorum inflation.",
+  "independence_certificate_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "checks": {
+      "absent_certificate_reject": true,
+      "alias_or_unknown_relation_reject": true,
+      "cached_external_certificate_accept": true,
+      "fork_anchor_reject": true,
+      "hypothetical_current_external_certificate_accept": true,
+      "self_asserted_reject": true,
+      "stale_certificate_reject": true
+    },
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require a committed independently validated provider/operator/hardware independence certificate before any cross-role credit increase",
+    "extend anchor garbage collection through epoch 17 while proving canonical revocation-clear retention across source replacement and verifier lag",
+    "compose split-view eviction publication with source disappearance and one verifier-population rollback without accepting a forked membership root",
+    "test a second Byzantine eviction during the two-generation join sequence without allowing replacement populations to self-authorize",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "modeled_disjoint_roles_are_not_external_independence_proof": true,
+    "provider_operator_hardware_binding_required": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "split_view_eviction_join": {
+    "accepted": 5120,
+    "accepted_base_publication_states": 512,
+    "admissible_shared_deadline_vectors": 10,
+    "base_publication_states": 55296,
+    "cached_pre_split_view_bridge_recoveries": 1920,
+    "checks": {
+      "forked_eviction_view_reject": true,
+      "forked_membership_view_reject": true,
+      "join_before_eviction_reject": true,
+      "shared_deadline_not_reset": true,
+      "stale_eviction_proof_reject": true,
+      "two_post_plus_cached_pre_bridge_accept": true,
+      "two_post_plus_missing_accept": true,
+      "untrusted_join_reject": true
+    },
+    "delay_vectors": 16,
+    "delayed_recoveries": 4608,
+    "fork_acceptances": 0,
+    "one_missing_view_recoveries": 1920,
+    "patterns": 884736,
+    "post_deadline_acceptances": 0,
+    "pre_eviction_or_pre_join_acceptances": 0,
+    "publication_quorum": 2,
+    "shared_deadline": 3,
+    "stale_or_missing_eviction_proof_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0,
+    "verifier_populations": 3
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v64_regression_preserved": true
+  },
+  "tombstone_epoch16": {
+    "accepted": 22050,
+    "accepted_base_history_states": 630,
+    "admissible_shared_deadline_vectors": 35,
+    "base_history_states": 184320,
+    "canonical_clear16_recoveries": 4410,
+    "checks": {
+      "compact_behind_t15_accept": true,
+      "deadline_not_reset": true,
+      "deadline_origin_missing_reject": true,
+      "forked_publication_reject": true,
+      "full_epoch16_chain_accept": true,
+      "pre16_source_loss_cached_recovery_accept": true,
+      "source_churn_cached_recovery_accept": true,
+      "stale_clear_reject": true
+    },
+    "compact_behind_t15_recoveries": 4200,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 256,
+    "delayed_recoveries": 21420,
+    "forked_source_compaction_or_publication_acceptances": 0,
+    "invalid_history_acceptances": 0,
+    "overlapping_revocation_recoveries": 4410,
+    "patterns": 47185920,
+    "post_deadline_acceptances": 0,
+    "pre16_source_disappearance_recoveries": 525,
+    "proof_source_churn_recoveries": 525,
+    "shared_deadline": 3,
+    "stale_or_fork_clear_acceptances": 0
+  },
+  "two_consecutive_join": {
+    "accepted": 196140,
+    "accepted_base_membership_states": 19614,
+    "active_byzantine_acceptances": 0,
+    "admissible_shared_deadline_vectors": 10,
+    "base_membership_states": 1680700,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "byzantine_fork_reject": true,
+      "join1_quorum_accept": true,
+      "join2_after_carried_quorum_accept": true,
+      "membership_fork_reject": true,
+      "pair_of_joiners_cannot_self_authorize": true,
+      "shared_deadline_not_reset": true,
+      "stale_chain_reject": true,
+      "untrusted_join_not_counted": true
+    },
+    "delay_vectors": 16,
+    "delayed_recoveries": 176526,
+    "membership_fork_acceptances": 0,
+    "patterns": 26891200,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "shared_deadline": 3,
+    "stale_or_missing_chain_acceptances": 0,
+    "transient_membership_quorum_inflation_acceptances": 0,
+    "two_consecutive_join_recoveries": 25500,
+    "two_join_one_quarantine_recoveries": 7600,
+    "untrusted_join_quorum_credit_acceptances": 0
+  },
+  "version": "V65"
+}
