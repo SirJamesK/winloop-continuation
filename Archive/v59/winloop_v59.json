@@ -1,0 +1,205 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "e7586e621aa93dbcc78cd5f914266ddca0e38b0c787524642c16301d38a1c5d0",
+    "implementation_sha256": "10b2997c40c6016426f7f082a7176fe1a65a91a4a3cdc9f0f1e47c7fbabf631c",
+    "version": "V58"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "composed_partition_publication_gossip": {
+    "accepted": 400,
+    "by_total_delay": {
+      "0": {
+        "accepted": 40,
+        "rejected": 1688
+      },
+      "1": {
+        "accepted": 80,
+        "rejected": 3376
+      },
+      "10": {
+        "accepted": 0,
+        "rejected": 1728
+      },
+      "2": {
+        "accepted": 120,
+        "rejected": 5064
+      },
+      "3": {
+        "accepted": 160,
+        "rejected": 6752
+      },
+      "4": {
+        "accepted": 0,
+        "rejected": 8640
+      },
+      "5": {
+        "accepted": 0,
+        "rejected": 10368
+      },
+      "6": {
+        "accepted": 0,
+        "rejected": 8640
+      },
+      "7": {
+        "accepted": 0,
+        "rejected": 6912
+      },
+      "8": {
+        "accepted": 0,
+        "rejected": 5184
+      },
+      "9": {
+        "accepted": 0,
+        "rejected": 3456
+      }
+    },
+    "checks": {
+      "noncanonical_verifier_majority_reject": true,
+      "old_membership_with_two_current_reject": true,
+      "one_time_source_only_reject": true,
+      "same_case_at_total4_reject": true,
+      "time_partition_plus_verifier_fork_at_total3_accept": true
+    },
+    "deadline": 3,
+    "end_to_end_publication_plus_gossip_budget": true,
+    "gossip_delay_domain": [
+      0,
+      5
+    ],
+    "patterns": 62208,
+    "population_states": [
+      "canonical",
+      "missing",
+      "fork",
+      "stale"
+    ],
+    "post_deadline_acceptances": 0,
+    "publication_delay_domain": [
+      0,
+      5
+    ],
+    "simultaneous_time_partition_plus_single_verifier_fork_recoveries": 90,
+    "single_time_partition_recoveries": 300,
+    "time_states": [
+      "current",
+      "absent",
+      "old_membership"
+    ]
+  },
+  "digest": "c9a88403f543d13783c21aa19308f35ba9ffb403ef76c7f06119b22916f992b5",
+  "headline": "V59 binds the rotated time-issuer set to a 2-of-3 independently witnessed membership record: 500 authority/witness cases admit only 8 canonical states (4 surviving membership-authority disappearance) with zero stale/forked membership acceptance, while 62,208 simultaneous issuer-partition/publication/verifier-split cases admit 400 states only when publication plus gossip converges within the shared 3-step deadline, including 90 one-issuer-partition plus one-verifier-fork recoveries and zero post-deadline acceptance.",
+  "next": [
+    "bind membership-witness roster changes themselves to a separately rooted threshold history and test witness-set churn",
+    "compose multiple consecutive issuer-set rotations with delayed/offline verifier catch-up and replayed intermediate membership records",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "required_binding": [
+      "provider identity",
+      "hardware custody",
+      "operator authority",
+      "issuer/source",
+      "subject",
+      "epoch",
+      "binding hash"
+    ],
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "rotated_time_quorum": {
+    "accepted": 80,
+    "generation_change_bound_to_witnessed_rotation": true,
+    "issuers": [
+      "timeB",
+      "timeC",
+      "timeD"
+    ],
+    "membership_hash_bound_into_every_issuer_certificate": true,
+    "old_membership_acceptances": 0,
+    "patterns": 10290,
+    "post_deadline_stale_acceptances": 0,
+    "quorum": 2,
+    "single_partition_recoveries": 60,
+    "states": [
+      "current",
+      "absent",
+      "old_epoch",
+      "rollback",
+      "old_generation",
+      "old_membership",
+      "fork"
+    ]
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v58_regression_preserved": true
+  },
+  "version": "V59",
+  "witnessed_membership_rotation": {
+    "accepted": 8,
+    "authority_disappearance_recoveries": 4,
+    "authority_states": [
+      "canonical",
+      "absent_cached_canonical",
+      "stale_replay",
+      "fork"
+    ],
+    "canonical_new_membership": "timeB,timeC,timeD",
+    "checks": {
+      "cached_canonical_survives_authority_disappearance": true,
+      "canonical_two_witnesses_accept": true,
+      "forked_membership_reject": true,
+      "one_witness_only_reject": true,
+      "presented_stale_witness_reject": true,
+      "stale_membership_replay_reject": true
+    },
+    "expected_generations": {
+      "timeB": 9,
+      "timeC": 9,
+      "timeD": 1
+    },
+    "forked_membership_acceptances": 0,
+    "membership_authority_not_sufficient_without_witness_quorum": true,
+    "patterns": 500,
+    "stale_membership_acceptances": 0,
+    "tampered_rotation_binding_rejected": true,
+    "witness_quorum": 2,
+    "witness_states": [
+      "current",
+      "absent",
+      "stale_epoch",
+      "old_generation",
+      "fork"
+    ],
+    "witnesses": 3
+  }
+}
