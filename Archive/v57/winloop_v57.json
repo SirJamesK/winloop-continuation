@@ -1,0 +1,113 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "c3527721770a05486cf17700f2642ae97cd491900fef9d523a50ce3a67a26273",
+    "implementation_sha256": "3908b88731cd3dacc6b9be5bd9438af5910e81f4e3811908bfe2bf2c839e0635",
+    "version": "V56"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "bb5eec783aa363ef049af847df3e9924c21bc7c0d75fe9f4a3b09ad0c3395790",
+  "headline": "V57 binds the 3-step revocation deadline to an epoch-scoped monotonic certificate: all 180 skew/rollback/epoch cases produce zero post-deadline stale acceptance, while exhaustive dual-log source-loss/equivocation cases tolerate a single honest source loss per log but reject whole-log loss, sole forks, and same-epoch conflicting roots during A@7/B@8/witness@8 rotation.",
+  "monotonic_deadline_certificates": {
+    "accepted_by_skew": {
+      "-1": 4,
+      "-2": 4,
+      "0": 4,
+      "1": 4,
+      "2": 4
+    },
+    "accepted_current_before_or_at_deadline": 20,
+    "clock_skew_domain": [
+      -2,
+      2
+    ],
+    "deadline_steps": 3,
+    "expired_current_rejected": 10,
+    "monotonic_counter_and_epoch_are_security_binding": true,
+    "old_epoch_cases_rejected": 90,
+    "patterns": 180,
+    "rollback_cases_rejected": 60,
+    "rollback_domain": [
+      0,
+      2
+    ],
+    "stale_acceptances_after_deadline": 0,
+    "tampered_expiry_rejected": true,
+    "wall_clock_is_advisory_not_freshness_authority": true
+  },
+  "next": [
+    "compose monotonic deadline certificates with multi-issuer time-source disagreement and fail-closed recovery",
+    "extend same-epoch equivocation to verifier-population split views with delayed gossip convergence",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "required_binding": [
+      "provider identity",
+      "hardware custody",
+      "operator authority",
+      "issuer/source",
+      "subject",
+      "epoch",
+      "binding hash"
+    ],
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "source_loss_and_same_epoch_equivocation": {
+    "accepted": 25,
+    "asymmetric_single_source_loss_acceptances": 24,
+    "checks": {
+      "A_same_epoch_fork_rejected": true,
+      "B_same_epoch_fork_rejected": true,
+      "one_A_source_lost_B_both_current_accept": true,
+      "one_B_source_lost_A_both_current_accept": true,
+      "sole_A_fork_rejected": true,
+      "sole_B_fork_rejected": true,
+      "whole_A_loss_rejected": true,
+      "whole_B_loss_rejected": true
+    },
+    "equivocation_observed_and_rejected": 80,
+    "patterns": 144,
+    "rotation_epochs": {
+      "A": 7,
+      "B": 8,
+      "witness": 8
+    },
+    "target_root_bound_by_epoch_certificate_and_gossip": true,
+    "unknown_or_conflicting_source_state_fails_closed": true,
+    "whole_log_loss_patterns": 63
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v56_regression_preserved": true
+  },
+  "version": "V57"
+}
