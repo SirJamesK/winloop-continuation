@@ -1,0 +1,137 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "bb5eec783aa363ef049af847df3e9924c21bc7c0d75fe9f4a3b09ad0c3395790",
+    "implementation_sha256": "018a2f9307098fe5130ca4bbabfaa73b6d9c53e93609946abfea9b7e5cafa79f",
+    "version": "V57"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "composed_gate": {
+    "accepted_pattern_product": 6080,
+    "independent_pattern_product": 21176820,
+    "post_deadline_stale_acceptance": 0,
+    "requires_time_quorum_and_log_gossip": true,
+    "unknown_stale_conflicting_or_unbound_fails_closed": true
+  },
+  "digest": "e7586e621aa93dbcc78cd5f914266ddca0e38b0c787524642c16301d38a1c5d0",
+  "headline": "V58 composes a 2-of-3 monotonic time-issuer quorum with three-population split-view gossip: 10,290 issuer cases admit only 80 timely states (60 one-issuer partition recoveries) with zero post-deadline stale acceptance, while 2,058 verifier-view/delay cases admit 76 canonical-quorum recoveries and none after delay 3; stale, rollback, old-generation, and conflicting issuer evidence plus noncanonical log majorities fail closed.",
+  "multi_issuer_monotonic_quorum": {
+    "accepted": 80,
+    "all_current_acceptances": 20,
+    "canonical_target": "A8|B8|W8",
+    "expected_generation": {
+      "timeA": 8,
+      "timeB": 8,
+      "timeC": 8
+    },
+    "issuers": 3,
+    "patterns": 10290,
+    "presented_invalid_or_conflicting_source_fails_closed": true,
+    "quorum": 2,
+    "rejected_case_occurrences_by_presented_bad_state": {
+      "fork": 3810,
+      "future_epoch": 3810,
+      "old_epoch": 3810,
+      "old_generation": 3810,
+      "rollback": 3810
+    },
+    "rotation_epoch": 8,
+    "single_partition_recovery_acceptances": 60,
+    "stale_acceptances_after_deadline": 0,
+    "states_per_issuer": [
+      "current",
+      "absent",
+      "old_epoch",
+      "future_epoch",
+      "rollback",
+      "old_generation",
+      "fork"
+    ],
+    "tampered_expiry_rejected": true,
+    "wall_clock_is_advisory_not_freshness_authority": true
+  },
+  "next": [
+    "bind time-issuer quorum membership and generation changes to independently witnessed rotation records",
+    "compose verifier split-view convergence with simultaneous time-issuer partitions and delayed revocation publication",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "required_binding": [
+      "provider identity",
+      "hardware custody",
+      "operator authority",
+      "issuer/source",
+      "subject",
+      "epoch",
+      "binding hash"
+    ],
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "split_view_gossip_convergence": {
+    "accepted_after_canonical_quorum_convergence": 76,
+    "all_canonical_acceptances": 4,
+    "checks": {
+      "one_canonical_two_A_forks_reject": true,
+      "two_canonical_one_A_fork_delay3_accept": true,
+      "two_canonical_one_A_fork_delay4_reject": true,
+      "two_canonical_one_missing_B_delay2_accept": true,
+      "two_forks_one_missing_reject": true
+    },
+    "fork_never_authorizes_without_two_canonical_population_views": true,
+    "forked_view_recoveries": 36,
+    "gossip_delay_domain": [
+      0,
+      5
+    ],
+    "missing_view_recoveries": 24,
+    "patterns": 2058,
+    "populations": 3,
+    "post_deadline_acceptances": 0,
+    "split_view_recoveries": 72,
+    "stale_view_recoveries": 12,
+    "states_per_population": [
+      "canonical",
+      "missing_A",
+      "missing_B",
+      "A_fork",
+      "B_fork",
+      "both_fork",
+      "stale_epoch"
+    ],
+    "target_root_prebound_by_epoch_certificate": true
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v57_regression_preserved": true
+  },
+  "version": "V58"
+}
