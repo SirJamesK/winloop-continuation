@@ -1,0 +1,191 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "468245d5566e27b49ad5ef612e04859f2fe3ab0965bbfd1c8fe9fc3ac0f00729",
+    "implementation_sha256": "136266a1b4047d167b14b308b17c99cc2042b5a8e8bbde223269162d5cfa3213",
+    "version": "V60"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "360d9f05a3bc7dfaf8805229ba5b57b657f046715abf56195b8b58af43ebd9ec",
+  "headline": "V61 rotates the witness-history roots with a pinned dual-quorum handoff and explicit leaving/joining boundary: 78,125 root-rotation cases admit only 18 canonical/cached transitions, while 2,625,000 three-rotation compacted catch-up cases admit 1,056 chains only through the epoch-9\u2192roster-10\u2192epoch-10\u2192root-11\u2192roster-11\u2192epoch-11 hash path within one shared 3-step deadline, and 5,250 checkpoint-population cases accept 336 quorum-consistent recoveries with zero rollback, fork, or post-deadline acceptance.",
+  "next": [
+    "rotate the locally pinned root-history checkpoint itself using an independently witnessed long-horizon anchor transition and test loss of all pre-rotation online root sources",
+    "extend compacted catch-up beyond epoch 11 with multiple compaction layers and prove that no intermediate checkpoint can silently reset the shared revocation deadline",
+    "model asynchronous checkpoint gossip with Byzantine population churn, delayed compaction publication, and recovery from only threshold-retained history fragments",
+    "seek committed externally bound provider/hardware/operator independence evidence before raising conservative cross-role credit above 12",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_evidence_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "required_binding": [
+      "provider identity",
+      "hardware custody",
+      "operator authority",
+      "issuer/source",
+      "subject",
+      "epoch",
+      "binding hash"
+    ],
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "root_authority_rotation": {
+    "accepted": 18,
+    "cached_transition_recoveries": 9,
+    "checks": {
+      "cached_rotation_record_accept": true,
+      "dual_quorum_boundary_accept": true,
+      "forked_old_certificate_reject": true,
+      "new_quorum_without_old_boundary_reject": true,
+      "old_quorum_without_joining_boundary_reject": true,
+      "shared_overlap_only_reject": true,
+      "single_quorum_side_reject": true,
+      "stale_rotation_record_reject": true
+    },
+    "fork_rotation_acceptances": 0,
+    "leaving_and_joining_boundary_required": true,
+    "new_root_authorities": [
+      "historyRootB",
+      "historyRootC",
+      "historyRootD"
+    ],
+    "new_set_cannot_self_bootstrap": true,
+    "old_and_new_quorums_required": true,
+    "old_root_authorities": [
+      "historyRootA",
+      "historyRootB",
+      "historyRootC"
+    ],
+    "patterns": 78125,
+    "pinned_previous_checkpoint": "b36e05c650859d4bb3fb9f77b28747ca3b02f2c701d064e0196fae8d127fad0d",
+    "quorum": 2,
+    "shared_overlap_only_acceptances": 0,
+    "stale_rotation_acceptances": 0
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22,
+    "v60_regression_preserved": true
+  },
+  "three_rotation_catchup": {
+    "accepted": 1056,
+    "checks": {
+      "compacted_e10_checkpoint_accept": true,
+      "forked_checkpoint_source_reject": true,
+      "mixed_generation_cached_chain_accept": true,
+      "replayed_terminal_reject": true,
+      "same_chain_after_deadline_reject": true,
+      "stale_intermediate_reject": true,
+      "three_rotation_chain_accept_at_deadline": true,
+      "two_root_sources_missing_reject": true
+    },
+    "combined_root_plus_witness_source_loss_recoveries": 256,
+    "compacted_checkpoint_recoveries": 32,
+    "deadline": 3,
+    "delay_domain": [
+      0,
+      5
+    ],
+    "fork_terminal_acceptances": 0,
+    "mixed_generation_recoveries": 1020,
+    "offline_catchup_recoveries": 792,
+    "patterns": 2625000,
+    "post_deadline_acceptances": 0,
+    "replayed_terminal_acceptances": 0,
+    "retention_modes": [
+      "full_history",
+      "compacted_through_e10",
+      "one_root_source_missing",
+      "one_witness_source_missing",
+      "one_root_plus_one_witness_missing",
+      "two_root_sources_missing",
+      "forked_checkpoint_source"
+    ],
+    "root_rotation_hash_bound_into_roster_and_issuer": true,
+    "shared_deadline_not_per_stage": true,
+    "single_root_source_loss_recoveries": 256,
+    "single_witness_source_loss_recoveries": 256,
+    "stage_states": [
+      "canonical",
+      "cached_or_compacted",
+      "missing",
+      "stale_replay",
+      "fork"
+    ],
+    "terminal_states": [
+      "canonical_e11",
+      "replay_e10",
+      "fork_e11",
+      "missing"
+    ],
+    "three_issuer_epochs_hash_bound": true
+  },
+  "verifier_checkpoint_anti_rollback": {
+    "accepted": 336,
+    "checks": {
+      "cached_compacted_quorum_accept": true,
+      "fork_with_two_current_reject": true,
+      "post_deadline_reject": true,
+      "rollback_with_two_current_reject": true,
+      "single_current_reject": true,
+      "two_of_three_current_accept": true,
+      "two_sources_missing_fail_closed": true
+    },
+    "compacted_only_recoveries": 16,
+    "conflicting_presented_checkpoint_fails_closed": true,
+    "deadline": 3,
+    "delay_domain": [
+      0,
+      5
+    ],
+    "fork_acceptances": 0,
+    "offline_recoveries": 252,
+    "patterns": 5250,
+    "population_states": [
+      "canonical",
+      "cached_canonical",
+      "rollback_e10",
+      "fork_e11",
+      "missing"
+    ],
+    "post_deadline_acceptances": 0,
+    "quorum": 2,
+    "rollback_acceptances": 0,
+    "single_source_loss_recoveries": 240,
+    "source_modes": [
+      "all_sources",
+      "one_source_missing_1",
+      "one_source_missing_2",
+      "one_source_missing_3",
+      "compacted_only",
+      "two_sources_missing",
+      "forked_source"
+    ]
+  },
+  "version": "V61"
+}
