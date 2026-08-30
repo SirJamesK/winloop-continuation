@@ -1,0 +1,170 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "972ae30b001ead74b4ec3dff9fa9239343618949218a4551d43d0596209f1162",
+    "implementation_sha256": "91096f108d4a7bd96fc49b506d68757badf6740e8d9d87b4cb449bb09d150248",
+    "version": "V67"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "a1cdcf9262a92b50f572c221d204d980e5add5cbad92e15976e8e0bb9830581b",
+  "dual_proof_source_loss_publication_root_rollback": {
+    "accepted": 521640,
+    "accepted_base_publication_states": 14904,
+    "admissible_shared_deadline_vectors": 35,
+    "cached_authority_promotion_acceptances": 0,
+    "checks": {
+      "cached_authority_reject": true,
+      "fork_reject": true,
+      "root_without_publication_rollback_reject": true,
+      "simultaneous_rollback_accept": true,
+      "two_loss_accept": true,
+      "two_rollback_reject": true,
+      "unbound_root_reject": true
+    },
+    "delay_vectors": 256,
+    "fork_acceptances": 0,
+    "max_tolerated_rollback_views": 1,
+    "patterns": 2275983360,
+    "post_deadline_acceptances": 0,
+    "publication_quorum": 2,
+    "publication_rollback_recoveries": 10920,
+    "replacement_source_recoveries": 123480,
+    "shared_deadline": 3,
+    "simultaneous_two_source_loss_publication_root_rollback_recoveries": 840,
+    "stale_or_missing_eviction_proof_acceptances": 0,
+    "two_proof_source_loss_recoveries": 27720,
+    "unbound_root_rollback_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0,
+    "verifier_populations": 3
+  },
+  "headline": "V68 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-19 GC to 408,240 of 215,796,940,800 states across complete proof-source disappearance and cold verifier restart with zero deadline-reset/unpinned/cold-restart-as-authority acceptance, admits 521,640 of 2,275,983,360 two-proof-source-loss/publication-root-rollback states with zero cached-authority or unbound-root promotion, and admits 684,390 of 38,698,352,640 rollback-bound third-Byzantine-eviction states under one honest verifier loss with zero rollback-chain bypass, threshold reduction, or active-Byzantine acceptance.",
+  "independence_certificate_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "checks": {
+      "absent_reject": true,
+      "alias_reject": true,
+      "cached_external_accept": true,
+      "current_external_accept": true,
+      "fork_reject": true,
+      "self_asserted_reject": true,
+      "stale_reject": true
+    },
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 20 across total source loss followed by source reappearance and second cold restart",
+    "compose publication-root rollback with verifier-population rollback and delayed join evidence without cached-authority promotion",
+    "test a fourth Byzantine eviction with replacement-identity recycling after the rollback-bound third eviction",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "cached_evidence_never_promoted_to_authority": true,
+    "cold_restart_never_promoted_to_authority": true,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "provider_operator_hardware_binding_required": true,
+    "publication_and_root_rollback_must_be_same_bound_event": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "third_byzantine_eviction_after_rollback": {
+    "accepted": 684390,
+    "accepted_base_membership_states": 19554,
+    "active_byzantine_acceptances_after_eviction": 0,
+    "admissible_shared_deadline_vectors": 35,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "active_byz_reject": true,
+      "below_threshold_reject": true,
+      "evict3_one_loss_accept": true,
+      "evict3_without_rollback_binding_reject": true,
+      "join3_accept": true,
+      "rollback_recovery_accept": true,
+      "two_loss_reject": true
+    },
+    "delay_vectors": 256,
+    "max_honest_verifier_losses": 1,
+    "membership_or_eviction_fork_acceptances": 0,
+    "one_honest_verifier_loss_recoveries": 482160,
+    "patterns": 38698352640,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "quorum": 3,
+    "replacement_self_authorization_acceptances": 0,
+    "rollback_chain_bypass_acceptances": 0,
+    "rollback_recovery_recoveries": 38850,
+    "shared_deadline": 3,
+    "third_eviction_recoveries": 75600,
+    "third_eviction_with_one_honest_verifier_loss_recoveries": 50400,
+    "third_join_recoveries": 75600,
+    "two_honest_verifier_loss_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0
+  },
+  "tombstone_epoch19": {
+    "accepted": 408240,
+    "accepted_base_history_states": 3402,
+    "admissible_shared_deadline_vectors": 120,
+    "cached_clear19_after_total_source_loss_recoveries": 720,
+    "checks": {
+      "cold_restart_accept": true,
+      "combined_accept": true,
+      "fork_reject": true,
+      "full_accept": true,
+      "live_clear_without_source_reject": true,
+      "old_bridge_delayed_clear_reject": true,
+      "total_loss_accept": true,
+      "unpinned_total_loss_reject": true
+    },
+    "cold_restart_as_authority_acceptances": 0,
+    "cold_verifier_restart_recoveries": 26280,
+    "combined_disappearance_cold_restart_recoveries": 1800,
+    "complete_source_disappearance_recoveries": 3600,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 16384,
+    "fork_acceptances": 0,
+    "patterns": 215796940800,
+    "post_deadline_acceptances": 0,
+    "replacement_after_disappearance_recoveries": 42720,
+    "shared_deadline": 3,
+    "stale_or_fork_clear_acceptances": 0,
+    "unpinned_total_loss_acceptances": 0
+  },
+  "version": "V68"
+}
