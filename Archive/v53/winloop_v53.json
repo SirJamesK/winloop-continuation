@@ -1,0 +1,347 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 60,
+    "nonendpoint": 22
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "lag64_dual_log_recovery_accepted": true,
+    "lag65_freshness_rejected": true,
+    "selected_inclusion_valid": true,
+    "shared_audit": "132 + 4*k",
+    "split_log_equivocation_rejected": true,
+    "statements": 513,
+    "tampered_inclusion_rejected": true,
+    "trust_bearing_messages_unchanged": true
+  },
+  "common_control": {
+    "all_rejected": true,
+    "collapse_count": 6,
+    "collapse_provenance": [
+      21,
+      21,
+      21,
+      21,
+      21,
+      21
+    ]
+  },
+  "digest": "1227c469c39b5c9a186b88a4954d68233df66207ecdd8b5970b7672e0124f20d",
+  "endpoint_theorem": {
+    "cut": 21,
+    "fresh_reproof": false,
+    "source": "V13"
+  },
+  "headline": "V53 integrates all 378 two-family guard-sharing cases into the exact eight-epoch lifetime flow, shows both-global guards first fail statically at three shared authorities while one independent family remains admissible, and extends rotation evidence to fail closed under delayed cross-log publication, divergent pins, whole-log loss, equivocation, stale replay, and lag65 while tolerating one current source loss per log.",
+  "next": [
+    "extend temporal guard-sharing optimization beyond eight epochs with correlated guard-family lifetime shocks",
+    "model witness/log rotation under two-verifier asynchronous pin advancement with recovery from a temporarily absent log",
+    "decompose cross-role local ceremony/possession roots into hardware, operator, and publication prerequisites while preserving conservative credit",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "overlap": {
+    "all_shared_control_combinations_rejected": true,
+    "best_single_group_provenance": 21,
+    "tested_nonempty_combinations": 63,
+    "worst_combined_provenance": 16
+  },
+  "recursive_evidence_local_decomposition": {
+    "all_local_absorbed_rejected": true,
+    "carried_v52_distinct_cut": 12,
+    "common_witness_key_cross_role_locals_rejected": true,
+    "conservative_credited_cut_without_independence_proof": 12,
+    "cross_role_global_local_margin": 0,
+    "cyclic_local_provenance_rejected": true,
+    "interpretation": "explicit local possession+ceremony decomposition can raise modeled cut only when independently evidenced; cross-role sharing consumes the gain, and a common witness key with shared cross-role locals falls below threshold",
+    "modeled_cuts": {
+      "all_local_absorbed": 8,
+      "common_witness_key_cross_role_locals": 9,
+      "cross_role_local_families_global": 10,
+      "distinct": 16,
+      "issuer_local_absorbed": 12,
+      "issuer_local_families_global": 14,
+      "role_local_families_global": 12,
+      "witness_local_absorbed": 12,
+      "witness_local_families_global": 14
+    },
+    "modeled_distinct_cut_with_explicit_two-root_locals": 16,
+    "threshold": 10,
+    "unknown_independence_rejected": true
+  },
+  "recursive_guard_decomposition": {
+    "both_families_absorbed_all_rejected": true,
+    "both_families_absorbed_best_provenance": 21,
+    "both_families_global_first_failure_group_count": 3,
+    "both_families_global_rejected_count": 42,
+    "both_families_global_worst_provenance": 18,
+    "distinct_two_subroots_all_admitted": true,
+    "distinct_two_subroots_min_provenance": 23,
+    "guard_contract": "guard := current_local_possession AND fresh_local_ceremony; each primitive must be current and independently auditable",
+    "guards": 6,
+    "interpretation": "one independent guard subroot family can carry the static cut when the other is shared or absorbed; sharing both families creates a 3+-authority shortcut and must fail closed",
+    "one_family_absorbed_all_admitted": true,
+    "one_family_absorbed_min_provenance": 22,
+    "one_subroot_family_global_all_admitted": true,
+    "one_subroot_family_global_min_provenance": 23,
+    "tested_nonempty_authority_combinations": 63,
+    "within_each_guard_collapsed_all_admitted": true,
+    "within_each_guard_collapsed_min_provenance": 22
+  },
+  "rotation_pin_divergence": {
+    "availability_margin_per_log_sources": 1,
+    "broken_rotation_chain_rejected": true,
+    "converged_epoch3_accepted": true,
+    "delayed_cross_epoch_publication_rejected": true,
+    "divergent_verifier_pins_require_target_at_least_max_pin": true,
+    "lag64_accepted": true,
+    "lag65_rejected": true,
+    "max_freshness_lag": 64,
+    "mixed_witness_generation_rejected": true,
+    "partial_source_disappearance_tolerated": true,
+    "pin_advance_monotonic": true,
+    "pin_rollback_rejected_by_monotonic_update": true,
+    "post_pin_replay_rejected": true,
+    "same_epoch_source_equivocation_rejected": true,
+    "unknown_or_missing_log_rejected": true,
+    "whole_log_source_loss_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "static": {
+    "admitted": true,
+    "joint": 21,
+    "lower": 63,
+    "provenance": 22,
+    "routes": {
+      "ceremony": 23,
+      "pam": 23,
+      "recursive": 22
+    }
+  },
+  "temporal_capacity_optimizer": {
+    "correlated_scenario_count": 16,
+    "correlated_shocks": [
+      "anchor_detection_lower",
+      "authority_publication_lower",
+      "local_consumption_lower",
+      "observation_censor"
+    ],
+    "cost_model": "synthetic per-root stage-rate intervals/censor scenarios; not empirical attacker prices or response-time measurements",
+    "envelopes_h8": {
+      "censored_lower": {
+        "first_lower_cost_failure_budget": 4,
+        "first_route_failure_budget": 1,
+        "horizon": 8,
+        "irreducible_floor": 3,
+        "min_budget_to_floor": 178
+      },
+      "lower": {
+        "first_lower_cost_failure_budget": 4,
+        "first_route_failure_budget": 1,
+        "horizon": 8,
+        "irreducible_floor": 3,
+        "min_budget_to_floor": 178
+      },
+      "nominal": {
+        "first_lower_cost_failure_budget": 7,
+        "first_route_failure_budget": 2,
+        "horizon": 8,
+        "irreducible_floor": 3,
+        "min_budget_to_floor": 248
+      },
+      "upper": {
+        "first_lower_cost_failure_budget": 10,
+        "first_route_failure_budget": 3,
+        "horizon": 8,
+        "irreducible_floor": 3,
+        "min_budget_to_floor": 318
+      }
+    },
+    "horizon_regression": {
+      "2": {
+        "carried_v51": [
+          11,
+          34
+        ],
+        "floor": 11,
+        "nominal_min_budget_to_floor": 34,
+        "raw_terminal_count_states": 23
+      },
+      "3": {
+        "carried_v51": [
+          8,
+          66
+        ],
+        "floor": 8,
+        "nominal_min_budget_to_floor": 66,
+        "raw_terminal_count_states": 276
+      },
+      "4": {
+        "carried_v51": [
+          6,
+          102
+        ],
+        "floor": 6,
+        "nominal_min_budget_to_floor": 102,
+        "raw_terminal_count_states": 2300
+      },
+      "5": {
+        "carried_v51": [
+          5,
+          130
+        ],
+        "floor": 5,
+        "nominal_min_budget_to_floor": 130,
+        "raw_terminal_count_states": 14950
+      },
+      "6": {
+        "carried_v51": [
+          4,
+          174
+        ],
+        "floor": 4,
+        "nominal_min_budget_to_floor": 174,
+        "raw_terminal_count_states": 80730
+      },
+      "7": {
+        "carried_v51": null,
+        "floor": 4,
+        "nominal_min_budget_to_floor": 174,
+        "raw_terminal_count_states": 376740
+      },
+      "8": {
+        "carried_v51": null,
+        "floor": 3,
+        "nominal_min_budget_to_floor": 248,
+        "raw_terminal_count_states": 1560780
+      }
+    },
+    "max_horizon": 8,
+    "method": "exact monotone-cost exchange reduction to capacitated bipartite min-cost flow",
+    "nominal_to_worst_correlated_floor_budget_reduction": 44,
+    "roots": 22,
+    "v52_regression_preserved": true,
+    "verifier_consumption_remains_operative_gate": true,
+    "worst_correlated_scenario": {
+      "active": [
+        "authority_publication_lower",
+        "local_consumption_lower",
+        "observation_censor"
+      ],
+      "lower19_budget": 4,
+      "min_budget_to_floor3": 204,
+      "route21_budget": 1
+    }
+  },
+  "temporal_guard_sharing": {
+    "both_absorbed_all_fail_static": true,
+    "both_global_first_static_failure_group_count": 3,
+    "horizon": 8,
+    "interpretation": "temporal reuse cannot rescue a statically under-cut guard graph; among admitted aliases, shared guard roots reduce both static margin and the synthetic budget needed to cap verifier-visible concurrent provenance",
+    "method": "exact guard-alias component construction followed by the same capacitated min-cost lifetime flow",
+    "modes": {
+      "both_families_absorbed_into_authority": {
+        "cases": 63,
+        "h8_floor_range": [
+          2,
+          3
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": null,
+        "min_route21_budget_among_static_admitted": null,
+        "provenance_range": [
+          16,
+          21
+        ],
+        "static_admitted_cases": 0,
+        "static_rejected_cases": 63
+      },
+      "both_subroot_families_global": {
+        "cases": 63,
+        "h8_floor_range": [
+          3,
+          3
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": 226,
+        "min_route21_budget_among_static_admitted": 2,
+        "provenance_range": [
+          18,
+          23
+        ],
+        "static_admitted_cases": 21,
+        "static_rejected_cases": 42
+      },
+      "distinct_two_subroots": {
+        "cases": 63,
+        "h8_floor_range": [
+          3,
+          4
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": 216,
+        "min_route21_budget_among_static_admitted": 4,
+        "provenance_range": [
+          23,
+          28
+        ],
+        "static_admitted_cases": 63,
+        "static_rejected_cases": 0
+      },
+      "one_family_absorbed_into_authority": {
+        "cases": 63,
+        "h8_floor_range": [
+          3,
+          3
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": 244,
+        "min_route21_budget_among_static_admitted": 2,
+        "provenance_range": [
+          22,
+          22
+        ],
+        "static_admitted_cases": 63,
+        "static_rejected_cases": 0
+      },
+      "one_subroot_family_global": {
+        "cases": 63,
+        "h8_floor_range": [
+          3,
+          3
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": 258,
+        "min_route21_budget_among_static_admitted": 4,
+        "provenance_range": [
+          23,
+          23
+        ],
+        "static_admitted_cases": 63,
+        "static_rejected_cases": 0
+      },
+      "within_each_guard_collapsed": {
+        "cases": 63,
+        "h8_floor_range": [
+          3,
+          3
+        ],
+        "min_budget_to_h8_floor_among_static_admitted": 229,
+        "min_route21_budget_among_static_admitted": 2,
+        "provenance_range": [
+          22,
+          22
+        ],
+        "static_admitted_cases": 63,
+        "static_rejected_cases": 0
+      }
+    },
+    "one_independent_family_all_static_admitted": true,
+    "tested_authority_combinations": 63,
+    "tested_modes": 6,
+    "tested_temporal_cases": 378,
+    "unknown_guard_independence_rejected": true
+  },
+  "version": "V53"
+}
