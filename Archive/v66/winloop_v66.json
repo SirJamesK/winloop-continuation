@@ -1,0 +1,149 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "90c0b1862ec4d81b1e60e20334fa4f02bf6bbb410ae0db520017ffeb4db805d6",
+    "implementation_sha256": "c743e1c5fc027b4695623bbe6ed95dd3cfd847a6ff72a0f1250647735785cf01",
+    "version": "V65"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "df35c786955dd2f202c493be6a67a6eee32be8f37ede43a204b8be72a16c0c62",
+  "headline": "V66 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-17 GC to 91,392 of 1,605,632,000 states with zero deadline-reset/stale/fork acceptance while retaining clear evidence across source replacement and verifier lag, admits 31,360 of 35,123,200 source-loss/rollback split-view states with zero fork or post-deadline acceptance, and admits 361,680 of 1,889,568,000 second-Byzantine-eviction states with zero replacement self-authorization or active-Byzantine acceptance.",
+  "independence_certificate_gate": {
+    "alias_or_unknown_relation_acceptances": 0,
+    "checks": {
+      "absent_reject": true,
+      "alias_reject": true,
+      "cached_external_accept": true,
+      "current_external_accept": true,
+      "fork_reject": true,
+      "self_asserted_reject": true,
+      "stale_reject": true
+    },
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150,
+    "self_asserted_acceptances": 0,
+    "stale_or_conflicting_acceptances": 0
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 18 across dual source replacement and verifier restart",
+    "compose rollback recovery with two proof-source losses without cached-authority promotion",
+    "test consecutive second-Byzantine eviction plus join rollback under one honest verifier loss",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "recursive_publication_recovery_evidence": {
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "provider_operator_hardware_binding_required": true,
+    "signed_metadata_alone_insufficient": true,
+    "unknown_stale_cyclic_or_unbound_rejected": true
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "second_byzantine_eviction": {
+    "accepted": 361680,
+    "accepted_base_membership_states": 18084,
+    "active_second_byzantine_acceptances": 0,
+    "admissible_shared_deadline_vectors": 20,
+    "below_threshold_history_acceptances": 0,
+    "checks": {
+      "active_byz_reject": true,
+      "evict2_accept": true,
+      "join1_accept": true,
+      "join2_accept": true,
+      "missing_eviction_reject": true,
+      "self_authorize_reject": true
+    },
+    "delay_vectors": 64,
+    "membership_or_eviction_fork_acceptances": 0,
+    "missing_or_stale_second_eviction_proof_acceptances": 0,
+    "patterns": 1889568000,
+    "population_slots": 5,
+    "post_deadline_acceptances": 0,
+    "post_second_eviction_join2_recoveries": 30400,
+    "quorum": 3,
+    "replacement_self_authorization_acceptances": 0,
+    "second_eviction_recoveries": 71600,
+    "shared_deadline": 3,
+    "stale_or_missing_chain_acceptances": 0,
+    "untrusted_join_acceptances": 0
+  },
+  "split_view_source_loss_rollback": {
+    "accepted": 31360,
+    "accepted_base_publication_states": 1568,
+    "admissible_shared_deadline_vectors": 20,
+    "checks": {
+      "fork_reject": true,
+      "rollback_accept": true,
+      "rollback_without_bridge_reject": true,
+      "source_loss_accept": true,
+      "two_rollback_reject": true
+    },
+    "delay_vectors": 64,
+    "fork_acceptances": 0,
+    "max_tolerated_rollback_views": 1,
+    "one_rollback_view_recoveries": 13440,
+    "patterns": 35123200,
+    "post_deadline_acceptances": 0,
+    "proof_source_disappearance_recoveries": 8960,
+    "publication_quorum": 2,
+    "shared_deadline": 3,
+    "stale_or_missing_eviction_proof_acceptances": 0,
+    "untrusted_or_conflicting_join_acceptances": 0,
+    "verifier_populations": 3
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V65",
+    "cost_model": "synthetic stage-rate model; not empirical attacker prices or response times",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "tombstone_epoch17": {
+    "accepted": 91392,
+    "accepted_base_history_states": 1632,
+    "admissible_shared_deadline_vectors": 56,
+    "checks": {
+      "deadline_missing_reject": true,
+      "fork_reject": true,
+      "full_accept": true,
+      "lag_recovery_accept": true,
+      "source_replace_clear_accept": true
+    },
+    "clear17_after_source_replacement_recoveries": 672,
+    "deadline_origin_preserved": "epoch12",
+    "deadline_reset_acceptances": 0,
+    "delay_vectors": 1024,
+    "fork_acceptances": 0,
+    "lagged_verifier_recoveries": 4704,
+    "patterns": 1605632000,
+    "post_deadline_acceptances": 0,
+    "shared_deadline": 3,
+    "source_replacement_recoveries": 6048,
+    "stale_or_fork_clear_acceptances": 0
+  },
+  "version": "V66"
+}
