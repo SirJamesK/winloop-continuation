@@ -1,0 +1,264 @@
+from itertools import product
+from math import comb
+
+D = 3
+
+def q(n):
+    # For a nonnegative vector with total <=3, the per-coordinate cap of 3 never binds.
+    return comb(n + D, D)
+
+def indep():
+    cert = ('absent', 'current', 'cached', 'stale', 'conflict', 'self')
+    anchor = ('current', 'cached', 'missing', 'stale', 'fork')
+    relation = ('disjoint', 'provider', 'operator', 'hardware', 'unknown')
+    ok = lambda c, a, r: c in cert[1:3] and a in anchor[:2] and r == 'disjoint'
+    admitted = [x for x in product(cert, anchor, relation) if ok(*x)]
+    return {
+        'patterns': len(cert) * len(anchor) * len(relation),
+        'hypothetical_gate_admits': len(admitted),
+        'committed_external_independence_certificate_present': False,
+        'conservative_cross_role_credit': 12,
+        'credit_raised': False,
+        'bad_acceptances': sum(1 for c, a, r in admitted if c not in cert[1:3] or a not in anchor[:2] or r != 'disjoint'),
+        'checks': [
+            ok('current', 'current', 'disjoint'),
+            ok('cached', 'cached', 'disjoint'),
+            not ok('stale', 'current', 'disjoint'),
+            not ok('self', 'current', 'disjoint'),
+            all(not ok('current', 'current', r) for r in relation[1:]),
+        ],
+    }
+
+# Carries V77's epoch-28 state machine and adds phase 19 for epoch-29
+# tombstone-root rollback/revalidation followed by a lineage-bound source split.
+H = {
+    0: list(product((0, 1), repeat=5)),
+    1: [(2, 2, x, y, z) for x in (0, 1) for y in (0, 1) for z in (0, 1)],
+    2: [(2, 2, 1, 1, 1)],
+    3: [(2, 2, x, 1, 1) for x in (0, 1)],
+    4: [(2, 2, 2, 1, 1)],
+    5: [(2, 2, 1, x, 1) for x in (0, 1)],
+    6: [(2, 2, 2, 2, 1)],
+    7: [(2, 2, 1, 1, x) for x in (0, 1)],
+    8: [(2, 2, 1, 2, 1), (2, 2, 2, 1, 1)],
+    9: [(2, 2, 1, 1, 1), (2, 2, 2, 1, 1), (2, 2, 1, 2, 1)],
+    10: [(2, 2, 2, 2, 2)],
+    11: [(2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    12: [(2, 2, 1, 1, 2), (2, 2, 2, 2, 1)],
+    13: [(2, 2, 2, 2, 2)],
+    14: [(2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    15: [(2, 2, 2, 2, 2), (2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    16: [(2, 2, 2, 2, 2), (2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    17: [(2, 2, 2, 2, 2), (2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    18: [(2, 2, 2, 2, 2), (2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+    19: [(2, 2, 2, 2, 2), (2, 2, 1, 2, 2), (2, 2, 2, 1, 2)],
+}
+
+ALLOW = {
+    0: ((0, 7), (0, 1), (0,)),
+    1: ((0, 2, 4, 6, 7), (0, 1, 2, 5, 6, 7), (0, 2, 4, 6)),
+    2: ((1,), (1, 2), (1,)),
+    3: ((2,), (5,), (2,)),
+    4: ((3,), (2, 3), (3,)),
+    5: ((4,), (6,), (4,)),
+    6: ((5,), (3, 4), (5,)),
+    7: ((6, 7), (7,), (6,)),
+    8: ((4, 6, 7), (8, 9), (7,)),
+    9: ((2, 4, 6, 7), (10, 11), (0, 2, 4, 6, 7)),
+    10: ((7, 8), (11, 12), (8,)),
+    11: ((8,), (12, 13), (8,)),
+    12: ((7, 8), (12, 13), (7, 8)),
+    13: ((8,), (12, 13), (8,)),
+    14: ((7, 8), (12, 13), (7, 8)),
+    15: ((8,), (12, 13), (7, 8)),
+    16: ((8,), (12, 13), (7, 8)),
+    17: ((8,), (12, 13), (7, 8)),
+    18: ((8,), (12, 13), (7, 8)),
+    19: ((8,), (12, 13), (7, 8)),
+}
+
+def gok(h, c, s, r, l, p, a, f1, f2, k, rc, kr, sr, rr, rb, kl, krec, lr,
+        ll, lrb, trc, trb, trv, lsplit, dl):
+    if (
+        c >= 20 or s >= 9 or r >= 8 or l >= 14 or p >= 3 or a >= 9
+        or f1 >= 4 or f2 >= 4 or k >= 3 or rc >= 4 or kr >= 4
+        or sr >= 4 or rr >= 4 or rb >= 4 or kl >= 4 or krec >= 4
+        or lr >= 4 or ll >= 4 or lrb >= 4 or trc >= 4
+        or trb >= 4 or trv >= 4 or lsplit >= 4 or dl >= 3
+        or h not in H[c]
+    ):
+        return False
+    S, L, A = ALLOW[c]
+    if s not in S or l not in L or a not in A:
+        return False
+    if dl != 0:
+        return False
+    if c < 15 and (rc != 0 or kr != 0):
+        return False
+    if c < 16 and (sr != 0 or rr != 0 or rb != 0):
+        return False
+    if c < 17 and (kl != 0 or krec != 0 or lr != 0):
+        return False
+    if c < 18 and (ll != 0 or lrb != 0 or trc != 0):
+        return False
+    if c < 19 and (trb != 0 or trv != 0 or lsplit != 0):
+        return False
+    if s == 7 and c not in (0, 1, 7, 8, 9, 10, 12, 14):
+        return False
+    if r in (5, 6, 7):
+        if c in (2, 4, 6, 10, 13) and (r not in (6, 7) or a not in (1, 3, 5, 8)):
+            return False
+        if c in (3, 5, 7, 11) and (r == 5) and a not in (2, 4, 6, 8):
+            return False
+        if c in (8, 12, 14) and r == 5:
+            return False
+        if l in (9, 11, 13) and p == 2:
+            return False
+    if f1 == 3 or f2 == 3:
+        return False
+    if c < 14 and f2 != 0:
+        return False
+    if c == 12:
+        if f1 not in (1, 2) or f2 != 0:
+            return False
+        if f1 == 2 and not (r in (6, 7) and l in (12, 13) and p < 2 and a in (7, 8)):
+            return False
+    elif c not in (14, 15, 16, 17, 18, 19) and f1 == 2:
+        return False
+    if c < 13 and k != 0:
+        return False
+    if c == 13:
+        if not (k == 2 and r in (6, 7) and f1 == 1 and f2 == 0):
+            return False
+    if c == 14:
+        if not (k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2) and 2 in (f1, f2) and p < 2):
+            return False
+    if c == 15:
+        if not (
+            k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2)
+            and 2 in (f1, f2) and p < 2 and rc == 1 and kr in (1, 2)
+        ):
+            return False
+    if c == 16:
+        if not (
+            k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2)
+            and 2 in (f1, f2) and p < 2 and rc == 1 and kr == 2
+            and sr == 1 and rr in (1, 2) and rb == 1
+        ):
+            return False
+    if c == 17:
+        if not (
+            k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2)
+            and 2 in (f1, f2) and p < 2 and rc == 1 and kr == 2
+            and sr == 1 and rr in (1, 2) and rb == 1
+            and kl == 1 and krec in (1, 2) and lr == 1
+        ):
+            return False
+    if c == 18:
+        if not (
+            k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2)
+            and 2 in (f1, f2) and p < 2 and rc == 1 and kr == 2
+            and sr == 1 and rr in (1, 2) and rb == 1
+            and kl == 1 and krec == 2 and lr == 1
+            and ll == 1 and lrb in (1, 2) and trc == 1
+        ):
+            return False
+    if c == 19:
+        if not (
+            k == 2 and r in (6, 7) and f1 in (1, 2) and f2 in (1, 2)
+            and 2 in (f1, f2) and p < 2 and rc == 1 and kr == 2
+            and sr == 1 and rr in (1, 2) and rb == 1
+            and kl == 1 and krec == 2 and lr == 1
+            and ll == 1 and lrb == 2 and trc == 1 and trb == 1
+        ):
+            return False
+        # Rollback is fail-closed. A lineage split can be considered only after
+        # full tombstone-root revalidation; 3 denotes unbound/conflicting state.
+        if trv not in (0, 1, 2) or lsplit not in (0, 1, 2):
+            return False
+        if trv < 2 and lsplit != 0:
+            return False
+    return True
+
+def gc29():
+    accepted = []
+    for c in range(20):
+        S, L, A = ALLOW[c]
+        if c == 15:
+            domains = ((1,), (1, 2), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,))
+        elif c == 16:
+            domains = ((1,), (2,), (1,), (1, 2), (1,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,), (0,))
+        elif c == 17:
+            domains = ((1,), (2,), (1,), (1, 2), (1,), (1,), (1, 2), (1,), (0,), (0,), (0,), (0,), (0,), (0,), (0,))
+        elif c == 18:
+            domains = ((1,), (2,), (1,), (1, 2), (1,), (1,), (2,), (1,), (1,), (1, 2), (1,), (0,), (0,), (0,), (0,))
+        elif c == 19:
+            domains = ((1,), (2,), (1,), (1, 2), (1,), (1,), (2,), (1,), (1,), (2,), (1,), (1,), (0, 1, 2), (0, 1, 2), (0,))
+        else:
+            domains = tuple((0,) for _ in range(15))
+        for h in H[c]:
+            for s, r, l, p, a, f1, f2, k in product(S, range(8), L, range(3), A, range(4), range(4), range(3)):
+                for rc, kr, sr, rr, rb, kl, krec, lr, ll, lrb, trc, trb, trv, lsplit, dl in product(*domains):
+                    x = (h, c, s, r, l, p, a, f1, f2, k, rc, kr, sr, rr, rb, kl, krec, lr, ll, lrb, trc, trb, trv, lsplit, dl)
+                    if gok(*x):
+                        accepted.append(x)
+    n = len(accepted)
+    z = q(21)
+    e29 = [x for x in accepted if x[1] == 19]
+    root_rollback = sum(x[21] == 1 for x in e29)
+    root_revalidation = sum(x[22] in (1, 2) for x in e29)
+    lineage_split = sum(x[23] in (1, 2) for x in e29)
+    stale_choice = sum(x[10] in (2, 3) or x[14] in (2, 3) for x in accepted)
+    unbound_source = sum(x[12] in (2, 3) for x in accepted)
+    unbound_rerotation = sum(x[13] == 3 for x in accepted)
+    unbound_recovery = sum(x[16] == 3 for x in accepted)
+    unbound_lineage = sum(x[17] in (2, 3) for x in accepted)
+    unbound_rebind = sum(x[19] == 3 for x in accepted)
+    tombroot_break = sum(x[20] in (2, 3) for x in accepted)
+    rollback_bad = sum(x[21] in (2, 3) for x in accepted)
+    revalidation_bad = sum(x[22] == 3 for x in accepted)
+    split_bad = sum(x[23] == 3 for x in accepted)
+    deadline_reset = sum(x[24] != 0 for x in accepted)
+    bad = (
+        stale_choice + unbound_source + unbound_rerotation + unbound_recovery
+        + unbound_lineage + unbound_rebind + tombroot_break + rollback_bad
+        + revalidation_bad + split_bad + deadline_reset
+    )
+    checks = [
+        gok((0, 1, 0, 1, 0), 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+        gok((2, 2, 2, 2, 2), 18, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 0, 0, 0, 0),
+        gok((2, 2, 2, 2, 2), 19, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 0, 0, 0),
+        gok((2, 2, 2, 2, 2), 19, 8, 7, 13, 0, 7, 1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 2, 0),
+        not gok((2, 2, 2, 2, 2), 19, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 0),
+        not gok((2, 2, 2, 2, 2), 19, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 3, 0, 0),
+        not gok((2, 2, 2, 2, 2), 19, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 3, 0),
+        not gok((2, 2, 2, 2, 2), 19, 8, 6, 12, 1, 8, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1),
+    ]
+    # Nominal state space: declared static domains times temporal delay/deadline vectors.
+    static_patterns = 4 ** 5 * 20 * 9 * 8 * 14 * 3 * 9 * 4 * 4 * 3 * (4 ** 15)
+    patterns = static_patterns * (4 ** 21) * z
+    return {
+        'patterns': patterns,
+        'accepted': n * z,
+        'base_states': n,
+        'delay_vectors': 4 ** 21,
+        'deadline_vectors': z,
+        'shared_deadline': 3,
+        'deadline_origin': 'epoch12',
+        'epoch29_tombstone_root_rollback_states': root_rollback * z,
+        'epoch29_bound_tombstone_root_revalidation_states': root_revalidation * z,
+        'epoch29_bound_source_lineage_split_states': lineage_split * z,
+        'stale_or_conflicting_root_choice_acceptances': stale_choice * z,
+        'unbound_source_replacement_acceptances': unbound_source * z,
+        'unbound_rerotation_acceptances': unbound_rerotation * z,
+        'unbound_key_recovery_acceptances': unbound_recovery * z,
+        'unbound_or_conflicting_lineage_rollover_acceptances': unbound_lineage * z,
+        'unbound_or_conflicting_lineage_rebind_acceptances': unbound_rebind * z,
+        'tombstone_root_discontinuity_acceptances': tombroot_break * z,
+        'unbound_or_conflicting_tombstone_root_rollback_acceptances': rollback_bad * z,
+        'unbound_or_conflicting_tombstone_root_revalidation_acceptances': revalidation_bad * z,
+        'unbound_or_conflicting_source_lineage_split_acceptances': split_bad * z,
+        'deadline_reset_acceptances': deadline_reset * z,
+        'bad_acceptances': bad * z,
+        'checks': checks,
+    }
