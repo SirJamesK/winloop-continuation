@@ -118,8 +118,14 @@ EXPECTED_DIGEST = '5b5719a56d2c3a6469e499966eafd9e5e3db0df04140084c489fc03a739da
 assert a['digest'] == EXPECTED_DIGEST
 
 for line in (H / 'winloop_v96_SHA256SUMS.txt').read_text().splitlines():
-    if line.strip():
-        d, n = line.split(maxsplit=1)
-        assert hashlib.sha256((H / n.strip()).read_bytes()).hexdigest() == d
+    if not line.strip() or line.lstrip().startswith('#'):
+        continue
+    d, n = line.split(maxsplit=1)
+    n = n.strip()
+    if n == 'winloop_v96.json':
+        canonical = json.dumps(json.loads((H / n).read_text()), sort_keys=True, separators=(',', ':')).encode()
+        assert hashlib.sha256(canonical).hexdigest() == d
+    else:
+        assert hashlib.sha256((H / n).read_bytes()).hexdigest() == d
 
 print(json.dumps({'version': 'V96', 'validated': True, 'digest': a['digest'], 'headline': a['headline']}, sort_keys=True))
