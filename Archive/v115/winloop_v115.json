@@ -1,0 +1,88 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "b9510df85e0cf9e16198aff06256607d3c5df36a7c9acc59e567697a5bc5c17d",
+    "implementation_sha256": "05cfd2899aa07277fa7c5754299d05595f907ec5f56366a006262fb67eb40cd3",
+    "version": "V114"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "e3c94f30261338016f4c9fafa47e898ebc1052e90848ac4fb1a77a00c62e2754",
+  "epoch66": {
+    "accepted": 473679360,
+    "bad_acceptances": 0,
+    "bound_nineteenth_source_binding_states": 203005440,
+    "bound_nineteenth_source_handoff_states": 338342400,
+    "bound_verifier_binding_states": 67668480,
+    "deadline_origin": "epoch12",
+    "deadline_vectors": 117480,
+    "delay_vectors": 23945242826029513411849172299223580994042798784118784,
+    "patterns": 97130205325758115050856430300592143724638950312224477677831222657913603214766334347992767997860641306050560,
+    "seed_states": 576
+  },
+  "headline": "V115 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-66 GC to 473,679,360 states with 338,342,400 bound nineteenth-source handoffs, 203,005,440 bound nineteenth-source bindings, and 67,668,480 bound verifier completions; admits 32,236,047,360 publication states with 2,930,549,760 fully bound fortieth-cold-restart recoveries; and admits 525,456,400 membership states with 375,326,000 bound root-22 witness rebinds and 75,065,200 bound quorum-churn completions, with zero modeled bad acceptances across all three continuation gates.",
+  "independence": {
+    "bad_acceptances": 0,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150
+  },
+  "membership22": {
+    "accepted": 525456400,
+    "bad_acceptances": 0,
+    "bound_replication_quorum_churn_states": 75065200,
+    "bound_root22_witness_binding_states": 225195600,
+    "bound_root22_witness_rebind_states": 375326000,
+    "deadline_vectors": 98770,
+    "delay_vectors": 23384026197294446691258957323460528314494920687616,
+    "patterns": 463829523793599077172338076770171744166475179848691305337480806400,
+    "seed_states": 760
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 67 by rotating the nineteenth-source lineage, binding that lineage, rebinding the handed proof, and preserving the epoch-12 deadline",
+    "compose fortieth-restart recovery with replacement-source churn, successor binding, fresh reconciliation, and a forty-first verifier cold restart without cached authority promotion",
+    "keep generation 4 and root 22 fixed while replacing and binding the witness source, rolling to root 23, binding root 23, and requiring replication-quorum churn without tombstone or source-binding discontinuity",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication40": {
+    "accepted": 32236047360,
+    "bad_acceptances": 0,
+    "bound_fortieth_restart_recoveries": 2930549760,
+    "bound_replacement_source_binding_states": 20513848320,
+    "bound_successor_source_disappearance_states": 26374947840,
+    "deadline_vectors": 105995,
+    "delay_vectors": 374144419156711147060143317175368453031918731001856,
+    "patterns": 98803197668683217293072013237065145363553221052390852721870110720,
+    "seed_states": 27648
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "version": "V115"
+}
