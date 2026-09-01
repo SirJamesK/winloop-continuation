@@ -91,7 +91,7 @@ def replacement_churn_twenty_third_restart():
         'replacement_source_churn_states': churn * z,
         'bound_replacement_source_churn_states': bound_churn * z,
         'successor_source_binding_states': successor * z,
-        'bound_successor_source_binding_states': bound_succcessor * z,
+        'bound_successor_source_binding_states': bound_successor * z,
         'dual_source_reconciliation_states': dual * z,
         'bound_dual_source_reconciliation_states': bound_dual * z,
         'twenty_third_verifier_cold_restart_states': restart23 * z,
