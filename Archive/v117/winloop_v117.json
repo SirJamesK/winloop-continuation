@@ -1,0 +1,88 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "4048885296831bfca1c4e95ecf7a07f81a6b75fb77668677a7d0e56669bc8cf8",
+    "implementation_sha256": "9d2b383524acdb2b7362a3ec4502b8ebfca08b1123dfde2c9737dcd66eddfc05",
+    "version": "V116"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "c3e35f2bc16e706874171cbad13aa7018322443d4e77a69eb8d29aa8ed4b3527",
+  "epoch68": {
+    "accepted": 540465408,
+    "bad_acceptances": 0,
+    "bound_twentieth_source_binding_states": 231628032,
+    "bound_twentieth_source_handoff_states": 386046720,
+    "bound_verifier_binding_states": 77209344,
+    "deadline_origin": "epoch12",
+    "deadline_vectors": 134044,
+    "delay_vectors": 6129982163463555433433388108601236734474956488734408704,
+    "patterns": 29052109341527562268873102790492993008806734575062905582801588367550775205227259044422600075177353471445897838592,
+    "seed_states": 576
+  },
+  "headline": "V117 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-68 GC to 540,465,408 states with 386,046,720 bound twentieth-source handoffs, 231,628,032 bound twentieth-source bindings, and 77,209,344 bound verifier completions; admits 36,946,990,080 publication states with 3,358,817,280 fully bound forty-second-cold-restart recoveries; and admits 604,160,480 membership states with 431,543,200 bound root-23 witness rebinds and 86,308,640 bound quorum-churn completions, with zero modeled bad acceptances across all three continuation gates.",
+  "independence": {
+    "bad_acceptances": 0,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150
+  },
+  "membership23": {
+    "accepted": 604160480,
+    "bad_acceptances": 0,
+    "bound_replication_quorum_churn_states": 86308640,
+    "bound_root23_witness_binding_states": 258925920,
+    "bound_root23_witness_rebind_states": 431543200,
+    "deadline_vectors": 113564,
+    "delay_vectors": 5986310706507378352962293074805895248510699696029696,
+    "patterns": 136525564708561801291888698447746407738762036600488159625721287802880,
+    "seed_states": 760
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 69 by rotating the twentieth-source lineage, binding that lineage, rebinding the handed proof, and preserving the epoch-12 deadline",
+    "compose forty-second-restart recovery with replacement-source churn, successor binding, fresh reconciliation, and a forty-third verifier cold restart without cached authority promotion",
+    "keep generation 4 and root 23 fixed while replacing and binding the witness source, rolling to root 24, binding root 24, and requiring replication-quorum churn without tombstone or source-binding discontinuity",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication42": {
+    "accepted": 36946990080,
+    "bad_acceptances": 0,
+    "bound_forty_second_restart_recoveries": 3358817280,
+    "bound_replacement_source_binding_states": 23511720960,
+    "bound_successor_source_disappearance_states": 30229355520,
+    "deadline_vectors": 121485,
+    "delay_vectors": 95780971304118053647396689196894323976171195136475136,
+    "patterns": 28990001943560309893195966821027821606960359858905834258093268008960,
+    "seed_states": 27648
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "version": "V117"
+}
