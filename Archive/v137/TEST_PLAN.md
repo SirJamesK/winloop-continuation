@@ -1,0 +1,3 @@
+# TEST_PLAN — V138
+
+Continue exactly one version from V137: keep independence fail closed unless a committed immutable external verifier artifact appears; rotate and bind the thirtieth-source lineage in epoch 89, rebind the handed proof, and preserve the epoch-12 deadline; compose the sixty-second recovery with replacement-source churn, successor binding, fresh reconciliation, and a sixty-third cold verifier restart without cached-authority promotion; replace the generation-4 witness source, roll root 33 to root 34, bind root 34, and require replication-quorum churn while preserving tombstone and prior-source continuity; retain V21 guarded routing until a replacement clears the >=2,000-seed bar with honest message accounting.
