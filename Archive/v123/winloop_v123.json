@@ -1,0 +1,88 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "e64fb7c88abb7ab88dddc1c79153bfed0fc3de90563e5815c5662002907f012c",
+    "implementation_sha256": "35e0a595c9d66c2103e88887fd84477a346980454162dc1d3e04fbfcf7529267",
+    "version": "V122"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "3cfe84048d6bb5a791b717806594df355dce4dc6ac07d8cf37785675cfbb058d",
+  "epoch74": {
+    "accepted": 777853440,
+    "bad_acceptances": 0,
+    "bound_twenty_third_source_binding_states": 333365760,
+    "bound_twenty_third_source_handoff_states": 555609600,
+    "bound_verifier_binding_states": 111121920,
+    "deadline_origin": "epoch12",
+    "deadline_vectors": 192920,
+    "delay_vectors": 102844034832575377634685573909834406561420991602098741459288064,
+    "patterns": 753229481478555924536026929114185428803078504427552065744079694232498469730107372941142186510863935946209033184717458990212055040,
+    "seed_states": 576
+  },
+  "headline": "V123 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-74 GC to 777,853,440 states with 555,609,600 bound twenty-third-source handoffs, 333,365,760 bound twenty-third-source bindings, and 111,121,920 bound verifier completions; admits 53,785,340,928 publication states with 4,889,576,448 fully bound forty-eighth-cold-restart recoveries; and admits 886,578,000 membership states with 633,270,000 bound root-26 witness rebinds and 126,654,000 bound quorum-churn completions, with zero modeled bad acceptances across all three continuation gates.",
+  "independence": {
+    "bad_acceptances": 0,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150
+  },
+  "membership26": {
+    "accepted": 886578000,
+    "bad_acceptances": 0,
+    "bound_replication_quorum_churn_states": 126654000,
+    "bound_root26_witness_binding_states": 379962000,
+    "bound_root26_witness_rebind_states": 633270000,
+    "deadline_vectors": 166650,
+    "delay_vectors": 100433627766186892221372630771322662657637687111424552206336,
+    "patterns": 3361232193225339364857603689318393923599169532041009078474482642308825088000,
+    "seed_states": 760
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 75 by rotating the twenty-third-source lineage, binding that lineage, rebinding the handed proof, and preserving the epoch-12 deadline",
+    "compose forty-eighth-restart recovery with replacement-source churn, successor binding, fresh reconciliation, and a forty-ninth verifier cold restart without cached authority promotion",
+    "keep generation 4 while replacing and binding the witness source, rolling root 26 to root 27, binding root 27, and requiring replication-quorum churn without tombstone or prior-source discontinuity",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication48": {
+    "accepted": 53785340928,
+    "bad_acceptances": 0,
+    "bound_forty_eighth_restart_recoveries": 4889576448,
+    "bound_replacement_source_binding_states": 34227035136,
+    "bound_successor_source_disappearance_states": 44006188032,
+    "deadline_vectors": 176851,
+    "delay_vectors": 1606938044258990275541962092341162602522202993782792835301376,
+    "patterns": 708032188912790283051508458345444542583115290298202333402564704563338674176,
+    "seed_states": 27648
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "version": "V123"
+}
