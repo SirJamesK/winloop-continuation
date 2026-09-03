@@ -1,0 +1,90 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "0b334216ca86ccf3156d201e0aa8543ed412a0dba574c75accef95f406670cda",
+    "implementation_sha256": "a426e470d9713f81ca1bac0346c4df3ffbba44d4cc4cf74f5e4e0012421ba2d6",
+    "version": "V146"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "72a40c8a509f48ddd3b72923cf81cccd00dd96d880c474208d3d60244ba0faab",
+  "epoch98": {
+    "accepted": 2406716928,
+    "bad_acceptances": 0,
+    "bound_thirty_fifth_source_binding_states": 1031450112,
+    "bound_thirty_fifth_source_handoff_states": 1719083520,
+    "bound_verifier_binding_states": 343816704,
+    "deadline_origin": "epoch12",
+    "deadline_vectors": 596904,
+    "delay_vectors": 8148143905337944345073782753637512644205873574663745002544561797417525199053346824733589504,
+    "patterns": 4021180322543742312460096018502868320124053042346415974809856253930344925726741103977507007479097068473015343984784956743442917843503829372732829987509621512881294303911876425511301875503257199050752,
+    "seed_states": 576
+  },
+  "headline": "V147 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-98 GC to 2,406,716,928 states with 1,719,083,520 bound thirty-fifth-source handoffs, 1,031,450,112 bound thirty-fifth-source bindings, and 343,816,704 bound verifier completions; admits 171,064,396,800 publication states with 15,551,308,800 fully bound seventy-second-cold-restart recoveries; and admits 2,874,257,680 membership states with 2,053,041,200 bound root-38 witness rebinds, 1,231,824,720 bound witness renewals, and 410,608,240 bound quorum-churn completions, with zero modeled bad acceptances across all three continuation gates.",
+  "independence": {
+    "bad_acceptances": 0,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150
+  },
+  "membership38": {
+    "accepted": 2874257680,
+    "bad_acceptances": 0,
+    "bound_replication_quorum_churn_states": 410608240,
+    "bound_root38_witness_binding_states": 1231824720,
+    "bound_root38_witness_rebind_states": 2053041200,
+    "deadline_vectors": 540274,
+    "delay_vectors": 7957171782556586274486115970349133441607298412757563479047423630290551952200534008528896,
+    "patterns": 863349910646640704565936178039388233250212071865454192312844028297860438957070326031348540508383299502080,
+    "seed_states": 760
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 99 by rotating the thirty-fifth-source lineage, binding that lineage, rebinding the handed proof, and preserving the epoch-12 deadline",
+    "compose seventy-second-restart recovery with replacement-source churn, successor binding, fresh reconciliation, and a seventy-third verifier cold restart without cached authority promotion",
+    "keep generation 4 after root-38 witness rebind, replace the witness source, roll to root 39, bind root 39, and require replication-quorum churn without tombstone or prior-source discontinuity",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication72": {
+    "accepted": 171064396800,
+    "bad_acceptances": 0,
+    "bound_fresh_reconciliation_states": 77756544000,
+    "bound_replacement_source_binding_states": 108859161600,
+    "bound_seventy_second_restart_recoveries": 15551308800,
+    "bound_seventy_second_restart_states": 46653926400,
+    "bound_successor_source_disappearance_states": 139961779200,
+    "deadline_vectors": 562475,
+    "delay_vectors": 127314748520905380391777855525586135065716774604121015664758778084648831235208544136462336,
+    "patterns": 178413737242397663941378265375391245610681699592564902616230390911430751478382170316063591577673111961600,
+    "seed_states": 27648
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "version": "V147"
+}
