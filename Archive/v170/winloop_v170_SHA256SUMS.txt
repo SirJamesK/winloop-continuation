@@ -1,0 +1,5 @@
+# winloop_v170.json uses canonical JSON SHA-256; all other entries use raw-file SHA-256.
+b0b69c9be3d5bc641f1058df0cac7cd51fd1b98e26b037b79c4f85f124a1d378  distributed_winloop_v170.py
+a349faaf0e2f49b18b4767ee97fa791b1cab800f81d6c2f7788d2731b7a73654  winloop_v170.json
+23ec7d203fa6620b1acb610431a3470b9009933ff02ecd9f0c93ee3fc124f5f6  winloop_v170_report.md
+3426b0f2e84e3b8f0984e0c0262b5f29469a18730c5057238a550cb793952150  winloop_v170_validate.py
