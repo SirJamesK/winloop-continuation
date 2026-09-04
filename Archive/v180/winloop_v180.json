@@ -1,0 +1,92 @@
+{
+  "admission": {
+    "joint": 21,
+    "lower": 63,
+    "preserved": true,
+    "provenance": 22
+  },
+  "base": {
+    "digest": "6d830cfe5145f29b217e412b8181ed9ca0cccbe54c8c2db4fdf74cbb2a57c2db",
+    "implementation_sha256": "c724781e87bdf47b7dfb22a2e16ac22bf7d8b1c20ae305b0892febe0543ff960",
+    "version": "V179"
+  },
+  "checkpoint_recovery": {
+    "frontier_storage_only": true,
+    "max_lag": 64,
+    "shared_audit": "132 + 4*k",
+    "statements": 513,
+    "trust_bearing_messages_unchanged": true
+  },
+  "digest": "fb9c7c992e3a40990dee4924e8be1194dfbeaff449cd38b02f9b921b5482eb70",
+  "epoch131": {
+    "accepted": 9074799360,
+    "bad_acceptances": 0,
+    "bound_fifty_first_lineage_binding_states": 5041555200,
+    "bound_fifty_first_lineage_rotation_states": 7058177280,
+    "bound_handed_proof_rebind_states": 3024933120,
+    "bound_verifier_binding_states": 1008311040,
+    "deadline_origin": "epoch12",
+    "deadline_vectors": 1750540,
+    "delay_vectors": 44362715105933037753254626946289339254982993206013065202727673289833940924890009968639590497666233249558259375382457149263586525184,
+    "patterns": 132655154030477616537587194600987545965128596789776978166024090483683901244020002256213387032808636803896846724432461490894561455918314486185858593959999296417196375557320910218993054272503639001656476207670206676854739377341886108357408702889977582864726757820986795846280821934132486869189960663040,
+    "seed_states": 576
+  },
+  "headline": "V180 keeps cross-role credit at 12 with no committed external independence certificate, extends epoch-131 GC to 9,074,799,360 states with 7,058,177,280 bound fifty-first-lineage rotations, 5,041,555,200 bound lineage bindings, 3,024,933,120 bound handed-proof rebinds, and 1,008,311,040 bound verifier completions; admits 510,807,306,240 publication states with 46,437,027,840 fully bound one-hundred-fifth-cold-restart recoveries; and admits 13,654,847,800 membership states with 11,172,148,200 bound witness-source replacements, 6,206,749,000 bound root-55 rollovers, 3,724,049,400 bound root-55 bindings, and 1,241,349,800 bound quorum-churn completions, with zero modeled bad acceptances across all three continuation gates.",
+  "independence": {
+    "bad_acceptances": 0,
+    "committed_external_independence_certificate_present": false,
+    "conservative_cross_role_credit": 12,
+    "credit_raised": false,
+    "hypothetical_gate_admits": 4,
+    "patterns": 150
+  },
+  "membership55": {
+    "accepted": 13654847800,
+    "bad_acceptances": 0,
+    "bound_replication_quorum_churn_states": 1241349800,
+    "bound_root55_binding_states": 3724049400,
+    "bound_root55_rollover_states": 6206749000,
+    "bound_witness_source_replacement_states": 11172148200,
+    "deadline_vectors": 1633355,
+    "delay_vectors": 43322963970637732180912721627235682866194329302747133987038743447103457934462900359999600095377180907771737671271930809827721216,
+    "patterns": 357295397594496274766961899626577089043118389614928334120059057772119310691996720218787507843866822705031219841199942694924806045805149091056844800,
+    "seed_states": 760
+  },
+  "next": [
+    "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+    "extend anchor GC through epoch 132 by handing the rebound proof to a fifty-second source, binding that source, and preserving the epoch-12 deadline",
+    "compose one-hundred-fifth-restart recovery with successor-source disappearance, replacement-source binding, fresh reconciliation, and a one-hundred-sixth verifier cold restart without cached authority promotion",
+    "keep generation 4 after root-55 rollover, rebind the witness to root 55, renew the witness binding, and require replication-quorum churn without tombstone or prior-source discontinuity",
+    "retain V21 routing until the >=2000-seed replacement bar clears"
+  ],
+  "publication105": {
+    "accepted": 510807306240,
+    "bad_acceptances": 0,
+    "bound_fresh_reconciliation_states": 232185139200,
+    "bound_one_hundred_fifth_restart_recoveries": 46437027840,
+    "bound_one_hundred_fifth_restart_states": 139311083520,
+    "bound_replacement_source_churn_states": 417933250560,
+    "bound_successor_source_binding_states": 325059194880,
+    "deadline_vectors": 1679580,
+    "delay_vectors": 693167423530203714894603546035770925859109268843954143792619895153655326951406405759993601526034894524347802740350892957243539456,
+    "patterns": 2900582272096539040839707876256022342203820960841696666425702693565807890018094100527044620739787470440240146109739251989447965779251322924564480,
+    "seed_states": 27648
+  },
+  "routing": {
+    "active": "V21 guarded",
+    "replacement": false
+  },
+  "runtime": {
+    "new_routing_envelope": false
+  },
+  "temporal_floor_regression": {
+    "budget": 851,
+    "carried_from": "V66",
+    "floor": 1,
+    "h11_budget": 398,
+    "h11_floor": 2,
+    "horizon": 22,
+    "roots": 22
+  },
+  "version": "V180"
+}
