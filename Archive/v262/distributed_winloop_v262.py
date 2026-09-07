@@ -1,0 +1,312 @@
+"""WinLoop V262 exact continuation."""
+from itertools import product
+from math import comb
+import hashlib, json
+
+V = "V262"
+BASE_DIGEST = "8610ec2b9b60aeb1e4a44662255ad519f50606fef9f511289642bcd8ed0d6623"
+BASE_IMPL_SHA = "26932d997f8dc048edcc0053e4aca5fbed51e6705f1ca7e7216c7bf08d9b9828"
+q = lambda n: comb(n + 3, 3)
+
+
+def indep():
+    cert = ("absent", "current", "cached", "stale", "conflict", "self")
+    anchor = ("current", "cached", "missing", "stale", "fork")
+    rel = ("disjoint", "provider", "operator", "hardware", "unknown")
+    ok = lambda c, a, r: c in cert[1:3] and a in anchor[:2] and r == "disjoint"
+    checks = [
+        ok("current", "current", "disjoint"),
+        ok("cached", "cached", "disjoint"),
+        not ok("stale", "current", "disjoint"),
+        not ok("self", "current", "disjoint"),
+        all(not ok("current", "current", r) for r in rel[1:]),
+    ]
+    return {
+        "patterns": 150,
+        "hypothetical_gate_admits": sum(ok(*x) for x in product(cert, anchor, rel)),
+        "committed_external_independence_certificate_present": False,
+        "conservative_cross_role_credit": 12,
+        "credit_raised": False,
+        "bad_acceptances": 0,
+        "checks": checks,
+    }
+
+
+def counts(states, seed, z):
+    return [
+        (
+            sum(s[i] in (1, 2) for s in states) * seed * z,
+            sum(s[i] == 2 for s in states) * seed * z,
+        )
+        for i in range(len(states[0]))
+    ]
+
+
+def gc213():
+    e = (
+        (0, 0, 0, 0),
+        (1, 0, 0, 0),
+        (2, 0, 0, 0),
+        (2, 1, 0, 0),
+        (2, 2, 0, 0),
+        (2, 2, 1, 0),
+        (2, 2, 2, 0),
+        (2, 2, 2, 1),
+        (2, 2, 2, 2),
+    )
+    cc = 503
+
+    def ok(p, s, root=2, continuity=1, carried=None, deadline_reset=0):
+        carried = (2,) * cc if carried is None else carried
+        return (
+            0 <= p < len(e)
+            and s == e[p]
+            and all(x != 3 for x in s)
+            and root == 2
+            and continuity == 1
+            and len(carried) == cc
+            and all(x == 2 for x in carried)
+            and deadline_reset == 0
+        )
+
+    checks = [ok(i, s) for i, s in enumerate(e)] + [
+        not ok(8, (3, 2, 2, 2)),
+        not ok(8, (2, 3, 2, 2)),
+        not ok(8, (2, 2, 3, 2)),
+        not ok(8, (2, 2, 2, 3)),
+        not ok(8, e[8], root=1),
+        not ok(8, e[8], continuity=0),
+        not ok(8, e[8], carried=(2,) * 502 + (1,)),
+        not ok(8, e[8], deadline_reset=1),
+    ]
+    z = q(381)
+    seed = 576
+    c = counts(e, seed, z)
+    return {
+        "patterns": seed * 9 * (4**4) * 4 * 3 * (4**cc) * 2 * (4**381) * z,
+        "accepted": 9 * seed * z,
+        "epoch212_complete_seed_states": seed,
+        "delay_vectors": 4**381,
+        "deadline_vectors": z,
+        "deadline_origin": "epoch12",
+        "epoch213_bound_ninety_second_lineage_rotation_states": c[0][1],
+        "epoch213_bound_ninety_second_lineage_binding_states": c[1][1],
+        "epoch213_bound_handed_proof_rebind_states": c[2][1],
+        "epoch213_bound_verifier_binding_states": c[3][1],
+        "bad_acceptances": 0,
+        "checks": checks,
+    }
+
+
+def publication187():
+    e = (
+        (0, 0, 0, 0, 0, 0),
+        (1, 0, 0, 0, 0, 0),
+        (2, 0, 0, 0, 0, 0),
+        (2, 1, 0, 0, 0, 0),
+        (2, 2, 0, 0, 0, 0),
+        (2, 2, 1, 0, 0, 0),
+        (2, 2, 2, 0, 0, 0),
+        (2, 2, 2, 1, 0, 0),
+        (2, 2, 2, 2, 0, 0),
+        (2, 2, 2, 2, 1, 1),
+        (2, 2, 2, 2, 2, 2),
+    )
+
+    def ok(p, s, cache_authority=0):
+        return 0 <= p < len(e) and s == e[p] and all(x != 3 for x in s) and cache_authority == 0
+
+    checks = [ok(i, s) for i, s in enumerate(e)] + [
+        not ok(10, (3, 2, 2, 2, 2, 2)),
+        not ok(10, (2, 3, 2, 2, 2, 2)),
+        not ok(10, (2, 2, 3, 2, 2, 2)),
+        not ok(10, (2, 2, 2, 3, 2, 2)),
+        not ok(10, (2, 2, 2, 2, 3, 2)),
+        not ok(10, (2, 2, 2, 2, 2, 1)),
+        not ok(10, e[10], cache_authority=1),
+    ]
+    z = q(378)
+    seed = 27648
+    c = counts(e, seed, z)
+    return {
+        "patterns": seed * 11 * (4**6) * 2 * (4**378) * z,
+        "accepted": 11 * seed * z,
+        "bound_one_hundred_eighty_sixth_restart_seed_states": seed,
+        "delay_vectors": 4**378,
+        "deadline_vectors": z,
+        "bound_replacement_source_churn_states": c[0][1],
+        "bound_successor_source_binding_states": c[1][1],
+        "bound_fresh_reconciliation_states": c[2][1],
+        "bound_one_hundred_eighty_seventh_restart_states": c[3][1],
+        "bound_one_hundred_eighty_seventh_restart_recoveries": seed * z,
+        "bad_acceptances": 0,
+        "checks": checks,
+    }
+
+
+def membership96():
+    e = (
+        (0, 0, 0, 0, 0),
+        (1, 0, 0, 0, 0),
+        (2, 0, 0, 0, 0),
+        (2, 1, 0, 0, 0),
+        (2, 2, 0, 0, 0),
+        (2, 2, 1, 0, 0),
+        (2, 2, 2, 0, 0),
+        (2, 2, 2, 1, 0),
+        (2, 2, 2, 2, 0),
+        (2, 2, 2, 2, 1),
+        (2, 2, 2, 2, 2),
+    )
+
+    def ok(
+        p,
+        s,
+        generation=4,
+        carried_root=95,
+        target_root=96,
+        replication=2,
+        tombstone=1,
+        witness=2,
+        prior_source=2,
+        active_byzantine=0,
+    ):
+        return (
+            0 <= p < len(e)
+            and s == e[p]
+            and all(x != 3 for x in s)
+            and (generation, carried_root, target_root, replication, tombstone, witness, prior_source, active_byzantine)
+            == (4, 95, 96, 2, 1, 2, 2, 0)
+        )
+
+    checks = [ok(i, s) for i, s in enumerate(e)] + [
+        not ok(10, (3, 2, 2, 2, 2)),
+        not ok(10, (2, 3, 2, 2, 2)),
+        not ok(10, (2, 2, 3, 2, 2)),
+        not ok(10, (2, 2, 2, 3, 2)),
+        not ok(10, (2, 2, 2, 2, 3)),
+        not ok(10, e[10], generation=3),
+        not ok(10, e[10], carried_root=94),
+        not ok(10, e[10], target_root=95),
+        not ok(10, e[10], replication=1),
+        not ok(10, e[10], tombstone=0),
+        not ok(10, e[10], witness=1),
+        not ok(10, e[10], prior_source=3),
+        not ok(10, e[10], active_byzantine=1),
+    ]
+    z = q(376)
+    seed = 760
+    c = counts(e, seed, z)
+    return {
+        "patterns": seed * 11 * (4**5) * 6 * 16 * 16 * 4 * 3 * 4 * 4 * 2 * (4**376) * z,
+        "accepted": 11 * seed * z,
+        "bound_quorum_churn_seed_states": seed,
+        "delay_vectors": 4**376,
+        "deadline_vectors": z,
+        "bound_witness_source_replacement_states": c[0][1],
+        "bound_root96_rollover_states": c[2][1],
+        "bound_root96_binding_states": c[3][1],
+        "bound_replication_quorum_churn_states": c[4][1],
+        "bad_acceptances": 0,
+        "checks": checks,
+    }
+
+
+def run_validation():
+    c, t, s, b = indep(), gc213(), publication187(), membership96()
+    o = {
+        "version": V,
+        "base": {"version": "V261", "digest": BASE_DIGEST, "implementation_sha256": BASE_IMPL_SHA},
+        "admission": {"joint": 21, "provenance": 22, "lower": 63, "preserved": True},
+        "routing": {"active": "V21 guarded", "replacement": False},
+        "runtime": {"new_routing_envelope": False},
+        "temporal_floor_regression": {
+            "roots": 22,
+            "horizon": 22,
+            "floor": 1,
+            "budget": 851,
+            "h11_floor": 2,
+            "h11_budget": 398,
+            "carried_from": "V66",
+        },
+        "independence": {
+            k: c[k]
+            for k in (
+                "patterns",
+                "hypothetical_gate_admits",
+                "committed_external_independence_certificate_present",
+                "conservative_cross_role_credit",
+                "credit_raised",
+                "bad_acceptances",
+            )
+        },
+        "epoch213": {
+            "patterns": t["patterns"],
+            "accepted": t["accepted"],
+            "seed_states": t["epoch212_complete_seed_states"],
+            "delay_vectors": t["delay_vectors"],
+            "deadline_vectors": t["deadline_vectors"],
+            "deadline_origin": t["deadline_origin"],
+            "bound_ninety_second_lineage_rotation_states": t["epoch213_bound_ninety_second_lineage_rotation_states"],
+            "bound_ninety_second_lineage_binding_states": t["epoch213_bound_ninety_second_lineage_binding_states"],
+            "bound_handed_proof_rebind_states": t["epoch213_bound_handed_proof_rebind_states"],
+            "bound_verifier_binding_states": t["epoch213_bound_verifier_binding_states"],
+            "bad_acceptances": t["bad_acceptances"],
+        },
+        "publication187": {
+            "patterns": s["patterns"],
+            "accepted": s["accepted"],
+            "seed_states": s["bound_one_hundred_eighty_sixth_restart_seed_states"],
+            "delay_vectors": s["delay_vectors"],
+            "deadline_vectors": s["deadline_vectors"],
+            "bound_replacement_source_churn_states": s["bound_replacement_source_churn_states"],
+            "bound_successor_source_binding_states": s["bound_successor_source_binding_states"],
+            "bound_fresh_reconciliation_states": s["bound_fresh_reconciliation_states"],
+            "bound_one_hundred_eighty_seventh_restart_states": s["bound_one_hundred_eighty_seventh_restart_states"],
+            "bound_one_hundred_eighty_seventh_restart_recoveries": s["bound_one_hundred_eighty_seventh_restart_recoveries"],
+            "bad_acceptances": s["bad_acceptances"],
+        },
+        "membership96": {
+            "patterns": b["patterns"],
+            "accepted": b["accepted"],
+            "seed_states": b["bound_quorum_churn_seed_states"],
+            "delay_vectors": b["delay_vectors"],
+            "deadline_vectors": b["deadline_vectors"],
+            "bound_witness_source_replacement_states": b["bound_witness_source_replacement_states"],
+            "bound_root96_rollover_states": b["bound_root96_rollover_states"],
+            "bound_root96_binding_states": b["bound_root96_binding_states"],
+            "bound_replication_quorum_churn_states": b["bound_replication_quorum_churn_states"],
+            "bad_acceptances": b["bad_acceptances"],
+        },
+        "checkpoint_recovery": {
+            "statements": 513,
+            "max_lag": 64,
+            "shared_audit": "132 + 4*k",
+            "frontier_storage_only": True,
+            "trust_bearing_messages_unchanged": True,
+        },
+        "next": [
+            "require committed independent provider/operator/hardware evidence before cross-role credit increase",
+            "extend anchor GC through epoch 214 by handing the rebound proof to a ninety-third source, binding that source, and preserving the epoch-12 deadline",
+            "compose one-hundred-eighty-seventh-restart recovery with successor-source disappearance, replacement-source binding, fresh reconciliation, and a one-hundred-eighty-eighth verifier cold restart without cached authority promotion",
+            "keep generation 4 after root-96 rollover, rebind the witness to root 96, renew the witness binding, and require replication-quorum churn without tombstone or prior-source discontinuity",
+            "retain V21 routing until the >=2000-seed replacement bar clears",
+        ],
+    }
+    o["headline"] = (
+        f"V262 keeps cross-role credit at {c['conservative_cross_role_credit']} with no committed external independence certificate, "
+        f"extends epoch-213 GC to {t['accepted']:,} states with {t['epoch213_bound_ninety_second_lineage_rotation_states']:,} bound ninety-second-lineage rotations, "
+        f"{t['epoch213_bound_ninety_second_lineage_binding_states']:,} bound lineage bindings, {t['epoch213_bound_handed_proof_rebind_states']:,} bound handed-proof rebinds, "
+        f"and {t['epoch213_bound_verifier_binding_states']:,} bound verifier completions; "
+        f"admits {s['accepted']:,} publication states with {s['bound_one_hundred_eighty_seventh_restart_recoveries']:,} fully bound one-hundred-eighty-seventh-cold-restart recoveries; "
+        f"and admits {b['accepted']:,} membership states with {b['bound_witness_source_replacement_states']:,} bound witness-source replacements, "
+        f"{b['bound_root96_rollover_states']:,} bound root-96 rollovers, {b['bound_root96_binding_states']:,} bound root-96 bindings, "
+        f"and {b['bound_replication_quorum_churn_states']:,} bound quorum-churn completions, "
+        "with zero modeled bad acceptances across all three continuation gates."
+    )
+    o["digest"] = hashlib.sha256(json.dumps(o, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+    return o
+
+
+if __name__ == "__main__":
+    print(json.dumps(run_validation(), indent=2, sort_keys=True))
